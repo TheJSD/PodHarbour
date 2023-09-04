@@ -8,6 +8,7 @@ db.podcasts.insertMany([
         author: "Arthur Buck",
         description: "The top podcast for all your favourite animal noises",
         genre: "Animals and Wildlife",
+        image: '',
         episodes: [{
             title:"Episode 1: Cat Sounds",
             description: "In this episode we listen to sounds of Cats",
@@ -29,6 +30,7 @@ db.podcasts.insertMany([
         author: "Mystery Software Engineer",
         description: "I joined a company as a Software Engineer and I have no idea what I'm doing. Please don't ask me any coding questions.",
         genre: "Coding",
+        image: '',
         episodes: [{
             title:"Episode 1: Functions",
             description: "What even are functions? Personally, I don't think they're even real.",
@@ -50,6 +52,7 @@ db.podcasts.insertMany([
         author: "Chad 'And Rotate' Adonis",
         description: "The podcast that proves sensitivity is a superpower! Join us on a journey to redefine what it means to be a true alpha in a world that desperately needs more sensitivity and kindness",
         genre: "The Manliest Genre",
+        image: '',
         episodes: [{
             title:"Mastering the Art of Self-Care",
             description: "Dive into the world of bubble baths, scented candles, and emotional expression. Real alphas take care of their feelings.",
