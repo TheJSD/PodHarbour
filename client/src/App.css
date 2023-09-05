@@ -5,15 +5,21 @@ body{
     background-attachment: fixed;
 }
 
+ul{
+    display: flex;
+    justify-content: center;
+}
 
-.Hero{
+
+.hero{
+    justify-content: center;
     padding-top: 2%;
     padding-right: 1%;
     padding-bottom: 1%;
     padding-left: 0.5%;
     width: 800px;
     background-color: #32334d77;
-    color: #FC984C;
+    color: #ffb834;
     padding-right: 50px;
     text-align: center;
     border-radius: 15px;
@@ -23,13 +29,13 @@ p{
     text-align: left;
 }
 
-.Hero-container{
-display: flex;
-margin-left: 15.4%;
-margin-top: 2%;
+.hero-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
 }
 
-.Hero-picture{
+.hero-picture{
     float: left;
     height: auto;
     width: 400px;
@@ -42,7 +48,7 @@ margin-top: 2%;
 
 .button-small {
     background-color: #32334dd7;
-    color: #FC984C;
+    color: #ffb834;
     padding: 15px;
     width: 160px;
     margin-left: 2%;
@@ -63,7 +69,7 @@ margin-top: 2%;
 
 .button-small-hero {
     background-color: #32334dd7;
-    color: #FC984C;
+    color: #ffb834;
     padding: 15px;
     width: 160px;
     margin-left: 2%;
@@ -85,7 +91,7 @@ margin-top: 2%;
 
 .button-caro {
     background-color: #32334d00;
-    color: #32334d;
+    color: #ffb834;
     padding: 5px;
     font-weight: bold;
     text-decoration: none;
@@ -95,11 +101,8 @@ margin-top: 2%;
 }
 
 .button-caro:hover {
-    color: #32334D;
-    background-color: #FC984C;
+    color: #FC984C;
     transition: 0.8s;
-    border-color: #32334d;
-    border-style: solid;
 }
 
 .nav {
@@ -107,22 +110,34 @@ margin-top: 2%;
     margin-left: 1%;
 }
 
-.episode-list {
+.podcast-list {
+    justify-content: center;
     list-style: none;
-    margin-left: 10.6%;
 }
 
-.episode {
-    display: inline-block;
-    margin: 0 auto;
+.podcast {
+    padding: 1%;
+    list-style: none;
     background-color: #32334dd7;
     width: 150px;
     height: 150px;
-    color: #FC984C;
+    color: #ffb834;
     margin-left: 1%;
     margin-right: 1%;
     margin-top: 0.5%;
+    text-align: left;
+    font-size: small;
+    border-radius: 20px;
+}
+
+.podcast-box {
     text-align: center;
+}
+
+.podcast-img{
+    height: auto;
+    width: 150px;
+    border-radius: 10px;
 }
 
 footer {

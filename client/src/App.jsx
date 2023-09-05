@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Hero from './assets/Hero.png'
 import GridContainer from './containers/GridContainer';
+import Placeholder from './assets/150.png'
 
 function App() {
 
@@ -29,17 +30,19 @@ const prevCaro = (e) => {
   setCaroArray(caroArray -5)
 }
 
+
 const Carousel = () => { 
   return(
   <>
-  <div className="episode-list">
+  <div className="podcast-list">
   <ul>
   <button onClick={prevCaro}className="button-caro">-</button>
-  <li className="episode">Episode 1</li>
-  <li className="episode">Episode 2</li>
-  <li className="episode">Episode 3</li>
-  <li className="episode">Episode 4</li>
-  <li className="episode">Episode 5</li><button onClick={nextCaro}className="button-caro">+</button>
+  {podcasts.map((podcast, index) => <li className="podcast"
+  ><div className="podcast-box">
+  <img className="podcast-img" src={Placeholder}></img><br />
+  <b>{podcast.name}</b><br />
+  <i>{podcast.author}</i></div><br /></li>)}
+  <button onClick={nextCaro}className="button-caro">+</button>
   </ul>
   </div>
   </>)
@@ -54,9 +57,9 @@ const Carousel = () => {
   </nav>
 
   <div className="backround">
-    <div className="Hero-container">
-      <div className="Hero">
-      <img className="Hero-picture" src={Hero}></img>
+    <div className="hero-container">
+      <div className="hero">
+      <img className="hero-picture" src={Hero}></img>
       <h2>Welcome to PodHarbour!</h2>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
       <div className="button-outer">
