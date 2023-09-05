@@ -15,8 +15,10 @@ const GridItem = ({podcast}) => {
     `
 
     const PodcastImage = styled.img`
-    height:150px;
+    /* height:150px; */
+    height:auto;
     width: 210px;
+    border-radius:10px;
     ` 
     const PodcastTitle = styled.p`
     text-align:center;
