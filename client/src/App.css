@@ -24,7 +24,7 @@ p{
 .Hero-container{
 display: flex;
 margin-left: 17%;
-margin-top: 5%;
+margin-top: 2%;
 }
 
 .Hero-picture{
@@ -39,7 +39,7 @@ margin-top: 5%;
 
 
 .button-small {
-    background-color: #32334dd8;
+    background-color: #32334dc5;
     color: #FC984C;
     padding: 15px;
     width: 160px;
@@ -72,12 +72,12 @@ margin-top: 5%;
 .episode {
     display: inline-block;
     margin: 0 auto;
-    background-color: #32334db9;
-    width: 180px;
-    height: 180px;
+    background-color: #32334dc5;
+    width: 150px;
+    height: 150px;
     color: #FC984C;
-    margin-left: 2%;
-    margin-top: 2%;
+    margin-left: 3.7%;
+    margin-top: 0.5%;
     text-align: center;
 }
 
