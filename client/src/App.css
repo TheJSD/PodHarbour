@@ -15,6 +15,7 @@ body{
     color: #FC984C;
     padding-right: 50px;
     text-align: center;
+    border-radius: 15px;
 }
 
 p{
@@ -52,6 +53,28 @@ margin-top: 2%;
 }
 
 .button-small:hover {
+    color: #32334D;
+    background-color: #FC984C;
+    transition: 0.8s;
+    border-color: #32334d;
+    border-style: solid;
+}
+
+.button-small-hero {
+    background-color: #32334dd7;
+    color: #FC984C;
+    padding: 15px;
+    width: 160px;
+    margin-left: 2%;
+    margin-top: 5%;
+    font-weight: bold;
+    text-decoration: none;
+    border-color: #32334d00;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.button-small-hero:hover {
     color: #32334D;
     background-color: #FC984C;
     transition: 0.8s;
@@ -105,4 +128,6 @@ footer {
     position: fixed;
     bottom: 0;
     color: #32334dc2;
+    background-color: white;
+    font-size: larger;
 }
