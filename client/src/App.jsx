@@ -31,7 +31,7 @@ const fetchPodcasts = () => {
     <Routes>
       <Route path="/">
         <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
-        {/* NEED AN ID ROUTE FOR Home Container */}
+        {/* NEED AN ID ROUTE FOR PodcastContainer */}
       </Route>
 
     </Routes>
