@@ -25,11 +25,12 @@ function App() {
     </div>
     <div className="episode-list">
     <ul>
+    <button className="button-caro">-</button>
     <li className="episode">Episode 1</li>
     <li className="episode">Episode 2</li>
     <li className="episode">Episode 3</li>
     <li className="episode">Episode 4</li>
-    <li className="episode">Episode 5</li>
+    <li className="episode">Episode 5</li><button className="button-caro">+</button>
     </ul>
     </div>
   </div>
