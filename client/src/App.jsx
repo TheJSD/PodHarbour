@@ -5,7 +5,6 @@ import GridContainer from './containers/GridContainer';
 import Placeholder from './assets/150.png'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
-import NavBar from './components/NavBar';
 import PodcastContainer from './containers/PodcastContainer';
 
 function App() {
@@ -31,7 +30,8 @@ const fetchPodcasts = () => {
 
     <Routes>
       <Route path="/">
-        <Route index element={<HomeContainer podcasts={podcasts}/>}/>
+        <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
+        {/* NEED AN ID ROUTE FOR Home Container */}
       </Route>
 
     </Routes>
