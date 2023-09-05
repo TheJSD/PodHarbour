@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const ObjectID = require('mongodb').ObjectID;
 
 const createRouter = function (collection) {
 
@@ -17,10 +18,10 @@ const createRouter = function (collection) {
         });
     });
 
-    router.post('/', (req, res) => {
-        //can we add a podcast in our app?
-        //do we use this post to add to our subscribed list?
-    })
+    // router.post('/', (req, res) => {
+    //     //can we add a podcast in our app?
+    //     //do we use this post to add to our subscribed list?
+    // })
 
     router.delete('/:id', (req, res) => {
         const id = req.params.id //id of database item;
@@ -32,9 +33,11 @@ const createRouter = function (collection) {
             res.json({status: 500, error:err});
         })
         
-    })
+    });
 
     //do we need an update route? can we update podcasts?
 
     return router
-}
+};
+
+module.exports = createRouter;
