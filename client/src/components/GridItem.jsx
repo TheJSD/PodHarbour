@@ -5,25 +5,35 @@ const GridItem = ({podcast}) => {
 
     const GridWrapper = styled.div`
         display:flex;
-        width:150px;
-        height:150px;
+        flex-direction:column;
+        width:210px;
+        height:210px;
+        background-color:#32334dd7;
+        color: #FC984C;
+        font-size:small;
+        border-radius: 20px;
     `
 
     const PodcastImage = styled.img`
-    height:120px;
-    width: 150px;
+    height:150px;
+    width: 210px;
     ` 
-    const PodcastTitle = styled.h3`
-    font-weight: bold;
+    const PodcastTitle = styled.p`
+    text-align:center;
+    margin:0;
+    font-weight:bold;
+    padding-bottom: 5px;
     `
-    const PodcastAuthor = styled.h2`
-    font-weight: bold;
+    const PodcastAuthor = styled.p`
+    text-align:center;
+    margin:0;
+    font-style:italic;
     `
 
   return (
     <GridWrapper>
         <PodcastImage src={podcast.image}/>
-        <PodcastTitle>{podcast.title}</PodcastTitle>
+        <PodcastTitle>{podcast.name}</PodcastTitle>
         <PodcastAuthor>{podcast.author}</PodcastAuthor>
     </GridWrapper>
   )

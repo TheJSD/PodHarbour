@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Hero from './assets/Hero.png'
+import GridContainer from './containers/GridContainer';
 
 function App() {
 
