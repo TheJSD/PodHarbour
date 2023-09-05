@@ -1,15 +1,25 @@
 import React from 'react'
 import GridItem from '../components/GridItem'
+import styled from 'styled-components'
+
 
 const GridContainer = ({podcasts}) => {
 
-    const gridItems = podcasts.map((podcast) => 
-    {<GridItem podcast={podcast}/>}
-    )
+    const gridItems = podcasts.map((podcast) => {
+    return <GridItem podcast={podcast}/>
+})
+
+const FlexContainer = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    gap:1rem;
+`
 
   return (
     <>
+    <FlexContainer>
     {gridItems}
+    </FlexContainer>
     </>
   )
 }
