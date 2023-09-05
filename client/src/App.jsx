@@ -3,6 +3,7 @@ import './App.css'
 import Hero from './assets/Hero.png'
 import GridContainer from './containers/GridContainer';
 import Placeholder from './assets/150.png'
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -55,12 +56,7 @@ const Carousel = () => {
 
   return (
   <>
-  <nav className="nav">
-    <button className="button-small">All Podcasts</button><br />
-    <button className="button-small">Saved Podcasts</button><br />
-    <button className="button-small">Help</button><br />
-  </nav>
-
+  <NavBar/>
   <div className="backround">
     <div className="hero-container">
       <div className="hero">
