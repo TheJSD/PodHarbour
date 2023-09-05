@@ -18,10 +18,31 @@ const createRouter = function (collection) {
         });
     });
 
-    // router.post('/', (req, res) => {
-    //     //can we add a podcast in our app?
-    //     //do we use this post to add to our subscribed list?
-    // })
+    router.get(("/:id"), (req, res) => {
+        const _id = req.params.id;
+        collection
+            .findOne({ _id: ObjectID(_id) })
+            .then((doc) => res.json(doc))
+            .catch((err) => {
+            console.error(err);
+            res.status(500);
+            res.json({ status: 500, error: err });
+        });
+    });
+
+    router.put ('/:id', (req, res) => {
+        const _id = req.params.id;
+        const updatedData = req.body;
+        delete updatedData._id
+        collection
+        .updateOne({_id: ObjectID(_id)}, {$set: updatedData})
+        .then((doc) => {
+            res.json(doc)
+        })
+        .catch((err) => {
+            res.status({status: 500, error: err})
+        })
+    })
 
     router.delete('/:id', (req, res) => {
         const id = req.params.id //id of database item;
