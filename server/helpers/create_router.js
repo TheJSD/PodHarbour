@@ -1,5 +1,6 @@
 const express = require('express')
 
+
 const createRouter = function (collection) {
 
 
@@ -17,10 +18,12 @@ const createRouter = function (collection) {
         });
     });
 
-    router.post('/', (req, res) => {
-        //can we add a podcast in our app?
-        //do we use this post to add to our subscribed list?
+    router.put('/subscribed', (req, res) => {
+        //add a podcast from the podcast collection to the user collection
+        const newData = req.body
+        //set newPodcastState to newData
     })
+    
 
     router.delete('/:id', (req, res) => {
         const id = req.params.id //id of database item;
@@ -33,8 +36,6 @@ const createRouter = function (collection) {
         })
         
     })
-
-    //do we need an update route? can we update podcasts?
 
     return router
 }
