@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Hero from './assets/Hero.png'
+import PodcastContainer from './containers/PodcastContainer';
 
 function App() {
 
@@ -17,7 +18,8 @@ useEffect(() => {
 const fetchPodcasts = () => {
   fetch(podcastsURL)
   .then(response => response.json())
-  .then(data => setPodcasts(data)); setLoading(false);
+  .then(data => setPodcasts(data))
+  .then(() => setLoading(false));
 }  
 
 const nextCaro = (e) => {
@@ -46,7 +48,9 @@ const Carousel = () => {
 
   return (
   <>
-  <nav className="nav">
+  {loading == false && (<PodcastContainer podcast = {podcasts[0]}/>)}
+  
+  {/* <nav className="nav">
     <button className="button-small">All Podcasts</button><br />
     <button className="button-small">Saved Podcasts</button><br />
     <button className="button-small">Help</button><br />
@@ -67,7 +71,7 @@ const Carousel = () => {
   </div>
   <footer>
   {caroArray}
-  </footer>
+  </footer> */}
   </>
   )
 }
