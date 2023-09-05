@@ -1,0 +1,88 @@
+body{
+    background-image: linear-gradient(180deg,  #FC984C, #834945);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+
+.Hero{
+    padding-top: 2%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 0.5%;
+    width: 800px;
+    background-color: #32334d77;
+    color: #FC984C;
+    padding-right: 50px;
+    text-align: center;
+}
+
+p{
+    text-align: left;
+}
+
+.Hero-container{
+display: flex;
+margin-left: 17%;
+margin-top: 5%;
+}
+
+.Hero-picture{
+    float: left;
+    height: auto;
+    width: 400px;
+    padding-right: 5%;
+}
+
+.button-outer{
+}
+
+
+.button-small {
+    background-color: #32334dd8;
+    color: #FC984C;
+    padding: 15px;
+    width: 160px;
+    margin-left: 2%;
+    margin-top: 5%;
+    font-weight: bold;
+    text-decoration: none;
+    border-color: #32334d00;
+    border-style: solid;
+}
+
+.button-small:hover {
+    color: #32334D;
+    background-color: #FC984C;
+    transition: 0.8s;
+    border-color: #32334d;
+    border-style: solid;
+}
+
+.nav {
+    position: fixed;
+    margin-left: 1%;
+}
+
+.episode-list {
+    list-style: none;
+    margin-left: 8%;
+}
+
+.episode {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #32334db9;
+    width: 180px;
+    height: 180px;
+    color: #FC984C;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    color: #32334dc2;
+}
