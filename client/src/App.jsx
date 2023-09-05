@@ -55,12 +55,8 @@ const Carousel = () => {
   <>
   {loading == false && (<PodcastContainer podcast = {podcasts[0]}/>)}
   
-  {/* <nav className="nav">
-    <button className="button-small">All Podcasts</button><br />
-    <button className="button-small">Saved Podcasts</button><br />
-    <button className="button-small">Help</button><br />
-  </nav>
-
+  {/*
+  
   <NavBar/>
   <div className="backround">
     <div className="hero-container">

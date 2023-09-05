@@ -1,5 +1,6 @@
 import React from 'react'
 import EpisodeItem from '../components/EpisodeItem'
+import { FlexContainer } from './styles/FlexContainer.style';
 
 const GridContainer = ({episodes}) => {
 
@@ -8,9 +9,9 @@ const GridContainer = ({episodes}) => {
     )
 
   return (
-    <>
+    <FlexContainer>
     {gridItems}
-    </>
+    </FlexContainer>
   )
 }
 

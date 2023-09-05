@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
-const EpisodeItem = ({episode}) => {
+import placeholder from '../assets/150.png'
 
     const GridWrapper = styled.div`
         display:flex;
@@ -14,10 +13,19 @@ const EpisodeItem = ({episode}) => {
     const EpisodeDescription = styled.h2`
     font-weight: bold;
     `
+    const EpisodeImage = styled.img`
+     /* height:150px; */
+    height:auto;
+    width: 210px;
+    border-radius:10px;
+    `
+
+const EpisodeItem = ({episode}) => {
+
 
   return (
     <GridWrapper>
-        <PodcastImage>src={podcast.image}</PodcastImage>
+        <EpisodeImage src={placeholder}></EpisodeImage>
         <EpisodeTitle>{episode.title}</EpisodeTitle>
         <EpisodeDescription>{episode.description}</EpisodeDescription>
     </GridWrapper>
