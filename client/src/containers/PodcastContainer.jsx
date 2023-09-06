@@ -5,6 +5,27 @@ import Placeholder from '../assets/150.png'
 import { useParams, useLocation } from 'react-router-dom'
 import { podcastsURL } from "../App"
 import { useEffect, useState } from "react"
+import styled from 'styled-components'
+
+  const PodcastWrapper = styled.div`
+    display:flex;
+    flex-direction:column;
+    height:215px;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 0.5%;
+    width: 800px;
+    background-color: #32334d77;
+    color: #ffb834;
+    padding-right: 20px;
+    text-align: end;
+    border-radius: 15px;
+  `
+  const PodcastImage = styled.img`
+  height:auto;
+  width: 240px;
+  border-radius:10px;
+  `
 
   const PodcastContainer = () => {
     
@@ -30,17 +51,17 @@ import { useEffect, useState } from "react"
     
   return (
     <>
+    <NavBar/>
     {loading == false && (
     <div className="background">
-    <NavBar/>
-    <div className="podcast-container">
-    <img className="podcast-img" src={Placeholder}></img><br />
+    <PodcastWrapper>
+    <PodcastImage src={Placeholder}></PodcastImage><br />
       <h1>{podcast.name}</h1>
       <h2>{podcast.author}</h2>
       <h4>{podcast.genre}</h4>
-      <button className="button-small">Subscribe</button>
+      <button className="button-small-hero">Subscribe</button>
       <p>{podcast.description}</p>
-    </div>
+    </PodcastWrapper>
     <div className="episode-list">
       <ul>
         <EpisodesGrid episodes = {podcast.episodes}/>
