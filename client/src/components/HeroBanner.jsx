@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import HeroImg from '../assets/Hero.png'
 import { Button } from './styles/Button.style'
 
-const HeroBanner = () => {
-
     const HeroBase = styled.section`
+    margin-top: 30px;
     justify-content: center;
     padding-top: 2%;
     padding-right: 1%;
@@ -30,6 +29,7 @@ const HeroBanner = () => {
     width: 400px;
     padding-right: 5%;`
 
+const HeroBanner = () => {
 
     return(
         <>

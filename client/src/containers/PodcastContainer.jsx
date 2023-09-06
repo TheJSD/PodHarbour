@@ -15,6 +15,8 @@ import { Button } from "../components/styles/Button.style"
   `
 
   const EpisodeWrapper = styled.div`
+  line-height: 250%;
+  margin-top: 30px;
   text-align: center;
   padding-right: 1%;
   padding-bottom: 3%;
@@ -37,6 +39,7 @@ import { Button } from "../components/styles/Button.style"
   `
 
   const EpisodeDesc = styled.div`
+  line-height: normal;
   text-align: left;
   margin-top: 15px;
   margin-left: 10px;
