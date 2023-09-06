@@ -9,23 +9,33 @@ import PodcastContainer from './containers/PodcastContainer';
 import AllPodcastsContainer from './containers/AllPodcastsContainer';
 
 export const podcastsURL = "http://localhost:9000/api/podcasts"
+const usersURL = "http://localhost:9000/api/users"
 
 function App() {
 
 const [podcasts, setPodcasts] = useState([])
 const [loading, setLoading] = useState(true);
+const [user, setUser] = useState({})
+
 
 
 useEffect(() => {
-  fetchPodcasts()
+  fetchPodcastsAndUser()
 }, [])
 
-const fetchPodcasts = () => {
+const fetchPodcastsAndUser = () => {
   fetch(podcastsURL)
   .then(response => response.json())
   .then(data => setPodcasts(data))
-  .then(() => setLoading(false));
+  fetch(usersURL)
+    .then(response => response.json())
+    .then(data => setUser(data[0]))
 }  
+
+const fetchThenLoad = () => {
+  fetchPodcastsAndUser()
+  .then(() => setLoading(false))
+}
 
   return (
 
