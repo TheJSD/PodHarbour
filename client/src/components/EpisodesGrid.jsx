@@ -2,8 +2,9 @@ import React from 'react'
 import EpisodeItem from '../components/EpisodeItem'
 import { FlexContainer } from './styles/FlexContainer.style';
 
-const GridContainer = ({episodes}) => {
+const EpisodesGrid = ({episodes}) => {
 
+  console.log (episodes)
     const gridItems = episodes.map((episode) => 
     {return <EpisodeItem episode={episode}/>}
     )
@@ -15,4 +16,4 @@ const GridContainer = ({episodes}) => {
   )
 }
 
-export default GridContainer
+export default EpisodesGrid
