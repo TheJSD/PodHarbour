@@ -9,7 +9,7 @@ justify-content: center;
 list-style: none;`
 
 const Podcast = styled.li`
-padding: 1%;
+padding: 1.5%;
 list-style: none;
 background-color: #32334dd7;
 width: 150px;
@@ -72,9 +72,9 @@ const Carousel = ({podcasts}) => {
     {caroDisp.length ? caroDisp.map((podcast, index) =>
     <Podcast key={podcast._id}>
     <PodcastTitle>
-    <PodcastImg src={Placeholder}></PodcastImg><br />
-    <b><Link to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
-    <i>{podcast.author}</i></PodcastTitle><br /></Podcast>) : "loading"}
+    <Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}><PodcastImg src={Placeholder}></PodcastImg></Link><br />
+    <b><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
+    <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}
     {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}className="button-caro">&#8680;</PodcastButton> : null}
     </ul>
     </PodcastList>
