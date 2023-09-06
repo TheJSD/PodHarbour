@@ -20,22 +20,25 @@ const [user, setUser] = useState({})
 
 
 useEffect(() => {
-  fetchPodcastsAndUser()
+  loadHandler()
 }, [])
 
-const fetchPodcastsAndUser = () => {
+const fetchPodcasts = () => {
   fetch(podcastsURL)
   .then(response => response.json())
   .then(data => setPodcasts(data))
+}  
+
+const fetchUser = () => {
   fetch(usersURL)
     .then(response => response.json())
     .then(data => setUser(data[0]))
-}  
-
-const fetchThenLoad = () => {
-  fetchPodcastsAndUser()
-  .then(() => setLoading(false))
 }
+
+const loadHandler = () => {
+  Promise.all([fetchPodcasts(), fetchUser()]).then(()=> setLoading(false))
+}
+
 
   return (
 
@@ -44,7 +47,6 @@ const fetchThenLoad = () => {
         <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
         <Route path="/:id" element={<PodcastContainer/>}/> 
         <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/>
-        {/* NEED AN ID ROUTE FOR PodcastContainer */}
       </Route>
 
     </Routes>
