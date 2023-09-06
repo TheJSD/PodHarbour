@@ -7,11 +7,14 @@ import NavBar from './components/NavBar';
 
 function App() {
 
-const [caroArray, setCaroArray] = useState(0);
-const [podcasts, setPodcasts] = useState([])
+// const [caroArray, setCaroArray] = useState(0);
+const [podcasts, setPodcasts] = useState([]);
 const [loading, setLoading] = useState(true);
+// const [caroDisp, setDispArray] = useState(5)
+// const [caroMax, setCaroMax] = useState(5);
+// const [caroMin, setCaroMin] = useState(0);
 
-const podcastsURL = "http://localhost:9000/api/podcasts"
+const podcastsURL = "http://localhost:9000/api/podcasts/"
 
 useEffect(() => {
   fetchPodcasts()
@@ -20,30 +23,32 @@ useEffect(() => {
 const fetchPodcasts = () => {
   fetch(podcastsURL)
   .then(response => response.json())
-  .then(data => setPodcasts(data)); setLoading(false);
+  .then(data => setPodcasts(data)); setLoading(false)
 }  
 
-const nextCaro = (e) => {
-  setCaroArray(caroArray +5)
-}
+// const setDisp = setDispArray(podcasts.slice(caroMin, caroMax))
 
-const prevCaro = (e) => {
-  setCaroArray(caroArray -5)
-}
+// const nextCaro = (e) => {
+//   setCaroMax(caroMin + 5)
+// }
 
+// const prevCaro = (e) => {
+//   setDispArray(caroDisp -5)
+// }
 
 const Carousel = () => { 
   return(
   <>
   <div className="podcast-list">
   <ul>
-  <button onClick={prevCaro}className="button-caro">-</button>
-  {podcasts.map((podcast, index) => <li className="podcast"
+  <button onClick={null}className="button-caro">-</button>
+  {podcasts.map((podcast, index) => index < 5 &&
+  <li className="podcast"
   ><div className="podcast-box">
   <img className="podcast-img" src={Placeholder}></img><br />
   <b>{podcast.name}</b><br />
   <i>{podcast.author}</i></div><br /></li>)}
-  <button onClick={nextCaro}className="button-caro">+</button>
+  <button onClick={null}className="button-caro">+</button>
   </ul>
   </div>
   </>)
@@ -66,7 +71,6 @@ const Carousel = () => {
     <Carousel />
   </div>
   <footer>
-  {caroArray}
   </footer>
   </>
   )
