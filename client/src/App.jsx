@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Hero from './assets/Hero.png'
-import GridContainer from './components/GridContainer';
+import GridContainer from './components/GridComponent';
 import Placeholder from './assets/150.png'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
