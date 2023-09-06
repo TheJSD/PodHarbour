@@ -91,13 +91,13 @@ p{
 
 .button-caro {
     background-color: #32334d00;
-    color: #ffb834;
+    color: #32334dd7;
     padding: 5px;
     font-weight: bold;
     text-decoration: none;
     border-color: #32334d00;
     border-style: solid;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .button-caro:hover {

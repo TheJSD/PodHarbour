@@ -7,12 +7,13 @@ import NavBar from './components/NavBar';
 
 function App() {
 
-// const [caroArray, setCaroArray] = useState(0);
+const [caroArray, setCaroArray] = useState(0);
 const [podcasts, setPodcasts] = useState([]);
 const [loading, setLoading] = useState(true);
-// const [caroDisp, setDispArray] = useState(5)
-// const [caroMax, setCaroMax] = useState(5);
-// const [caroMin, setCaroMin] = useState(0);
+const [caroDisp, setDispArray] = useState(5)
+const [caroMax, setCaroMax] = useState(5);
+const [caroMin, setCaroMin] = useState(0);
+const [trigger, setTrigger] = useState(1)
 
 const podcastsURL = "http://localhost:9000/api/podcasts/"
 
@@ -23,32 +24,36 @@ useEffect(() => {
 const fetchPodcasts = () => {
   fetch(podcastsURL)
   .then(response => response.json())
-  .then(data => setPodcasts(data)); setLoading(false)
+  .then(data => setPodcasts(data)); setLoading(false);
 }  
 
-// const setDisp = setDispArray(podcasts.slice(caroMin, caroMax))
+if (podcasts.length && trigger === 1) {setDispArray(podcasts.slice(caroMin, caroMax)); setTrigger(0)} else null
 
-// const nextCaro = (e) => {
-//   setCaroMax(caroMin + 5)
-// }
 
-// const prevCaro = (e) => {
-//   setDispArray(caroDisp -5)
-// }
+console.log(caroDisp)
+console.log(trigger)
+
+const nextCaro = (e) => {
+  setCaroMax(caroMax + 1); setCaroMin(caroMin +1); setTrigger(1)
+}
+
+const prevCaro = (e) => {
+  setCaroMax(caroMax -1); setCaroMin(caroMin -1); setTrigger(1)
+}
 
 const Carousel = () => { 
   return(
   <>
   <div className="podcast-list">
   <ul>
-  <button onClick={null}className="button-caro">-</button>
-  {podcasts.map((podcast, index) => index < 5 &&
+  {caroMax <= 6 ? null : <button onClick={prevCaro}className="button-caro">&#8678;</button>}
+  {caroDisp.length ? caroDisp.map((podcast, index) =>
   <li className="podcast"
   ><div className="podcast-box">
   <img className="podcast-img" src={Placeholder}></img><br />
   <b>{podcast.name}</b><br />
-  <i>{podcast.author}</i></div><br /></li>)}
-  <button onClick={null}className="button-caro">+</button>
+  <i>{podcast.author}</i></div><br /></li>) : "loading"}
+  {caroDisp.length === 5 ? <button onClick={nextCaro}className="button-caro">&#8680;</button> : null}
   </ul>
   </div>
   </>)
