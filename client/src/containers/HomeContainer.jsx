@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import HeroBanner from '../components/HeroBanner';
+import Header from '../components/Header'
 
 const HomeContainer = ({podcasts, loading}) => {
 
@@ -45,9 +46,10 @@ const HomeContainer = ({podcasts, loading}) => {
 
   return (
     <>
-    <NavBar/>
+    <NavBar />
+    <Header />
     <HeroBanner />
-      <Carousel />
+    <Carousel />
     <footer>
     </footer>
     </>
