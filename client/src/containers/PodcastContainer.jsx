@@ -14,13 +14,12 @@ import { useEffect, useState } from "react"
     const { podcastObject } = location.state;
 
     const [podcast, setPodcast] = useState()
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)  
 
     const fetchPodcast = async () => {
-      const res = await fetch(`${podcastsURL}`)
+      const res = await fetch(`${podcastsURL}/${id}`)
       const data =  await res.json();
-      setPodcast(data.filter((podcast) => podcast._id == id)
-      .reduce((podcast)=>(podcast)))
+      setPodcast(data)
     }
 
     useEffect(() => {
