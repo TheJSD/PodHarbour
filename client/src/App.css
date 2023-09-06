@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 body{
     background-image: linear-gradient(180deg,  #FC984C, #834945);
     background-size: cover;
