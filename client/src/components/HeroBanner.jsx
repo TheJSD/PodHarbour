@@ -12,6 +12,7 @@ const HeroBanner = () => {
     padding-bottom: 1%;
     padding-left: 0.5%;
     width: 800px;
+    height: 400px;
     background-color: #32334d77;
     color: #ffb834;
     padding-right: 50px;

@@ -1,6 +1,12 @@
 import React from 'react'
 import EpisodeItem from '../components/EpisodeItem'
 import { FlexContainer } from './styles/FlexContainer.style';
+import styled from 'styled-components'
+
+const OuterEpisode = styled.div`
+  display: flex;
+  justify-content: center;
+  list-style: none;`
 
 
 const EpisodesGrid = ({episodes}) => {
@@ -11,9 +17,11 @@ const EpisodesGrid = ({episodes}) => {
     )
 
   return (
-    <FlexContainer>
+    <>
+    <OuterEpisode>
     {gridItems}
-    </FlexContainer>
+    </OuterEpisode>
+    </>
   )
 }
 

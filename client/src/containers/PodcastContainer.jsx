@@ -6,25 +6,40 @@ import { useParams, useLocation } from 'react-router-dom'
 import { podcastsURL } from "../App"
 import { useEffect, useState } from "react"
 import styled from 'styled-components'
+import { Button } from "../components/styles/Button.style"
 
-  const PodcastWrapper = styled.div`
-    display:flex;
-    flex-direction:column;
-    height:300px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    padding-left: 40px;
-    padding-right: 20px;
-    width: 800px;
-    background-color: #32334d77;
-    color: #ffb834;
-    text-align: end;
-    border-radius: 15px;
+  const EpisodeOuterWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
   `
-  const PodcastImage = styled.img`
+
+  const EpisodeWrapper = styled.div`
+  text-align: center;
+  padding-right: 1%;
+  padding-bottom: 3%;
+  padding-left: 0.5%;
+  width: 800px;
+  height: 400px;
+  background-color: #32334d77;
+  color: #ffb834;
+  padding-right: 50px;
+  border-radius: 15px;
+  margin-bottom: 16px;
+  `
+  const EpisodeImage = styled.img`
+  float:left;
   height:auto;
   width: 240px;
   border-radius:10px;
+  margin-top: 50px;
+  margin-left: 5%;
+  `
+
+  const EpisodeDesc = styled.div`
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 10px;
   `
 
   const PodcastContainer = () => {
@@ -52,21 +67,18 @@ import styled from 'styled-components'
     <>
     <NavBar/>
     {loading == false && (
-    <div className="background">
-    <PodcastWrapper>
-    <PodcastImage src={Placeholder}></PodcastImage><br />
+    <>
+    <EpisodeOuterWrapper>
+    <EpisodeWrapper>
+    <EpisodeImage src={Placeholder}></EpisodeImage><br />
       <h1>{podcast.name}</h1>
-      <h2>{podcast.author}</h2>
-      <h4>{podcast.genre}</h4>
-      <button className="button-small-hero">Subscribe</button>
-      <p>{podcast.description}</p>
-    </PodcastWrapper>
-    <div className="episode-list">
-      <ul>
-        <EpisodesGrid episodes = {podcast.episodes}/>
-      </ul>
-    </div>
-    </div>
+            {podcast.genre}
+      <i><h2>{podcast.author}</h2></i>
+      <Button>Subscribe</Button><br />
+    <EpisodeDesc>{podcast.description}</EpisodeDesc>
+    </EpisodeWrapper>
+    </EpisodeOuterWrapper>
+            <EpisodesGrid episodes = {podcast.episodes}/></>
   )}
   </>)
 }
