@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import GridItem from './GridItem'
 import styled from 'styled-components'
 
@@ -27,8 +27,18 @@ const SearchBar = styled.input`
 
 const GridComponent = ({podcasts}) => {
 
-    const gridItems = podcasts.map((podcast) => {
+  const [input, setInput] = useState("")
+  
+  const filteredPodcasts = podcasts.filter((podcast) => 
+  podcast.name.toLowerCase().includes(input.toLowerCase()));
+
+  const filteredGridItems = filteredPodcasts.map((podcast) => { 
     return <GridItem podcast={podcast}/>
+  })
+
+  const gridItems = podcasts.map((podcast) => {
+    return <GridItem podcast={podcast}/>
+  
 })
 
 
@@ -36,13 +46,20 @@ const GridComponent = ({podcasts}) => {
     <>
     <Title>All Podcasts</Title>
     <FlexContainer>
-      <SearchBar/>
+      <SearchBar type="text" placeholder="Search for a Podcast!" onChange={(e) => setInput(e.target.value)} />
     </FlexContainer>
     
-
+    {input != "" ? 
+    <FlexContainer>
+    {filteredGridItems}
+    </FlexContainer> 
+    :
     <FlexContainer>
     {gridItems}
-    </FlexContainer>
+    </FlexContainer> }:
+    
+   
+
     </>
   )
 }

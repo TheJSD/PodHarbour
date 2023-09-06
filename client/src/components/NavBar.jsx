@@ -9,7 +9,7 @@ border: none;
 font-size: 16px;
 font-weight:bold;
 text-align:left;
-width:175px;
+width:150px;
 height: 60px;
 &:hover {
     background-color: #ffb83497;
