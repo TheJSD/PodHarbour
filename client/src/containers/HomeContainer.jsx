@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import Hero from '../assets/Hero.png'
 import Placeholder from '../assets/150.png'
 import NavBar from '../components/NavBar';
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
+import styled from 'styled-components'
+import HeroBanner from '../components/HeroBanner';
 
 const HomeContainer = ({podcasts, loading}) => {
 
-  const [caroArray, setCaroArray] = useState(0);
   const [caroDisp, setDispArray] = useState(5)
   const [caroMax, setCaroMax] = useState(5);
   const [caroMin, setCaroMin] = useState(0);
@@ -23,6 +23,7 @@ const HomeContainer = ({podcasts, loading}) => {
   const prevCaro = (e) => {
     setCaroMax(caroMax -1); setCaroMin(caroMin -1); setTrigger(1)
   }
+
 
   const Carousel = () => { 
     return(
@@ -45,19 +46,8 @@ const HomeContainer = ({podcasts, loading}) => {
   return (
     <>
     <NavBar/>
-    <div className="backround">
-      <div className="hero-container">
-        <div className="hero">
-        <img className="hero-picture" src={Hero}></img>
-        <h2>Welcome to PodHarbour!</h2>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <div className="button-outer">
-        <button className="button-small-hero">Test Button</button><button className="button-small-hero">Test Button</button>
-        </div>
-        </div>
-        </div>
+    <HeroBanner />
       <Carousel />
-    </div>
     <footer>
     </footer>
     </>
@@ -65,25 +55,3 @@ const HomeContainer = ({podcasts, loading}) => {
 }
 
 export default HomeContainer
-
-// {loading == false && (<PodcastContainer podcast = {podcasts[0]}/>)}
-  
-{/*
-
-<NavBar/>
-<div className="backround">
-  <div className="hero-container">
-    <div className="hero">
-    <img className="hero-picture" src={Hero}></img>
-    <h2>Welcome to PodHarbour!</h2>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    <div className="button-outer">
-    <button className="button-small-hero">Test Button</button><button className="button-small-hero">Test Button</button>
-    </div>
-    </div>
-    </div>
-  <Carousel />
-</div>
-<footer>
-{caroArray}
-</footer> */}
