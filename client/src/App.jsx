@@ -26,7 +26,6 @@ const fetchPodcasts = () => {
   .then(() => setLoading(false));
 }  
 
-
   return (
 
     <Routes>
