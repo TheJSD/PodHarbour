@@ -1,26 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const NavButton = styled.button`
+background: transparent;
+padding: 15px;
+color: #32334D;
+border: none;
+font-size: 16px;
+font-weight:bold;
+text-align:left;
+width:175px;
+height: 60px;
+&:hover {
+    background-color: #ffb83497;
+    transition: 0.8s;
+    border-radius: 5px;
+    color: #32334D;
+}
+`
 
 const NavBar = () => {
-
-    const NavButton = styled.button`
-        background: transparent;
-        padding: 15px;
-        color: #32334D;
-        border: none;
-        font-size: 16px;
-        font-weight:bold;
-        text-align:left;
-        width:175px;
-        height: 60px;
-        &:hover {
-            background-color: #ffb83497;
-            transition: 0.8s;
-            border-radius: 5px;
-            color: #32334D;
-        }
-    `
 
   return (
 

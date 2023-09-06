@@ -3,32 +3,31 @@ import styled from 'styled-components'
 import HeroImg from '../assets/Hero.png'
 import { Button } from './styles/Button.style'
 
+const HeroBase = styled.section`
+justify-content: center;
+padding-top: 2%;
+padding-right: 1%;
+padding-bottom: 1%;
+padding-left: 0.5%;
+width: 800px;
+background-color: #32334d77;
+color: #ffb834;
+padding-right: 50px;
+text-align: center;
+border-radius: 15px;`
+
+const HeroContainer = styled.section`
+display: flex;
+justify-content: center;
+margin-top: 2%;`
+
+const HeroPicture = styled.section`
+float: left;
+height: auto;
+width: 400px;
+padding-right: 5%;`
+
 const HeroBanner = () => {
-
-    const HeroBase = styled.section`
-    justify-content: center;
-    padding-top: 2%;
-    padding-right: 1%;
-    padding-bottom: 1%;
-    padding-left: 0.5%;
-    width: 800px;
-    background-color: #32334d77;
-    color: #ffb834;
-    padding-right: 50px;
-    text-align: center;
-    border-radius: 15px;`
-
-    const HeroContainer = styled.section`
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;`
-
-    const HeroPicture = styled.section`
-    float: left;
-    height: auto;
-    width: 400px;
-    padding-right: 5%;`
-
 
     return(
         <>
