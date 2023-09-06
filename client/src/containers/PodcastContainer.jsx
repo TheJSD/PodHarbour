@@ -1,9 +1,19 @@
 import "../App.css"
 import EpisodesGrid from "../components/EpisodesGrid"
 import Placeholder from '../assets/150.png'
+import { useParams, useLocation } from 'react-router-dom'
+import { podcastsURL } from "../App"
 
-  const PodcastContainer = ({podcast}) => {
-  
+  const PodcastContainer = () => {
+    
+    const location = useLocation();
+    const { podcastObject } = location.state;
+
+    const [podcast, setPodcast] = useState()
+
+    const fetchPodcast = async () => {
+      const res = await fetch(`${podcastsURL}`)
+    }
     
   return (
     <div className="background">

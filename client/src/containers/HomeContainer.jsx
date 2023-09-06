@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Hero from '../assets/Hero.png'
 import Placeholder from '../assets/150.png'
 import NavBar from '../components/NavBar';
+import { Routes, Route, Outlet, Link } from 'react-router-dom'
 
 const HomeContainer = ({podcasts, loading}) => {
 
@@ -25,7 +26,7 @@ const Carousel = () => {
   {podcasts.map((podcast, index) => <li className="podcast"
   ><div className="podcast-box">
   <img className="podcast-img" src={Placeholder}></img><br />
-  <b>{podcast.name}</b><br />
+  <b><Link to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
   <i>{podcast.author}</i></div><br /></li>)}
   <button onClick={nextCaro}className="button-caro">+</button>
   </ul>

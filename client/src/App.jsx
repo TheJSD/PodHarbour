@@ -7,12 +7,13 @@ import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
 import PodcastContainer from './containers/PodcastContainer';
 
+export const podcastsURL = "http://localhost:9000/api/podcasts"
+
 function App() {
 
 const [podcasts, setPodcasts] = useState([])
 const [loading, setLoading] = useState(true);
 
-const podcastsURL = "http://localhost:9000/api/podcasts"
 
 useEffect(() => {
   fetchPodcasts()
@@ -31,7 +32,7 @@ const fetchPodcasts = () => {
     <Routes>
       <Route path="/">
         <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
-        {/* <Route path="/:id" element={<PodcastContainer/>}/>  // WILL NEED TO UPDATE THIS */}
+        <Route path="/:id" element={<PodcastContainer/>}/> 
         {/* <Route path="/all" element={NEED CONTAINER}/> */}
         {/* NEED AN ID ROUTE FOR PodcastContainer */}
       </Route>
