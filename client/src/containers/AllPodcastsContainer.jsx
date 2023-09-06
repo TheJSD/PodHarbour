@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from '../components/NavBar'
-import GridContainer from '../components/GridComponent'
+import GridComponent from '../components/GridComponent'
+
 
 
 const AllPodcastsContainer = ({podcasts}) => {
@@ -9,7 +10,7 @@ const AllPodcastsContainer = ({podcasts}) => {
     <>
     <div className="background">
     <NavBar/>
-    <GridContainer podcasts={podcasts}/>
+    <GridComponent podcasts={podcasts}/>
     </div>
     </>
   )
