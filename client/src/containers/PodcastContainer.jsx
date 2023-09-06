@@ -10,14 +10,14 @@ import styled from 'styled-components'
   const PodcastWrapper = styled.div`
     display:flex;
     flex-direction:column;
-    height:215px;
-    padding-top: 2%;
-    padding-bottom: 1%;
-    padding-left: 0.5%;
+    height:300px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 20px;
     width: 800px;
     background-color: #32334d77;
     color: #ffb834;
-    padding-right: 20px;
     text-align: end;
     border-radius: 15px;
   `
