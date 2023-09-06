@@ -16,9 +16,16 @@ const Title = styled.h1`
   text-align:center;
   color: #32334D;
   font-size: 50px;
+  padding-left:100px;
 `
 
-const GridContainer = ({podcasts}) => {
+const SearchBar = styled.input`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+`
+
+const GridComponent = ({podcasts}) => {
 
     const gridItems = podcasts.map((podcast) => {
     return <GridItem podcast={podcast}/>
@@ -29,10 +36,15 @@ const GridContainer = ({podcasts}) => {
     <>
     <Title>All Podcasts</Title>
     <FlexContainer>
+      <SearchBar/>
+    </FlexContainer>
+    
+
+    <FlexContainer>
     {gridItems}
     </FlexContainer>
     </>
   )
 }
 
-export default GridContainer
+export default GridComponent
