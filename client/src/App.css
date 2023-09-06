@@ -11,7 +11,7 @@ ul{
 }
 
 
-.hero{
+/* .hero{
     justify-content: center;
     padding-top: 2%;
     padding-right: 1%;
@@ -25,10 +25,6 @@ ul{
     border-radius: 15px;
 }
 
-p{
-    text-align: left;
-}
-
 .hero-container{
     display: flex;
     justify-content: center;
@@ -40,12 +36,13 @@ p{
     height: auto;
     width: 400px;
     padding-right: 5%;
+} */
+
+p{
+    text-align: left;
 }
 
-.button-outer{
-}
-
-
+/* 
 .button-small {
     background-color: #32334dd7;
     color: #ffb834;
@@ -65,7 +62,7 @@ p{
     transition: 0.8s;
     border-color: #32334d;
     border-style: solid;
-}
+} */
 
 .button-small-hero {
     background-color: #32334dd7;
