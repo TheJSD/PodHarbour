@@ -42,7 +42,7 @@ const NavBar = () => {
     <nav className="nav">
         <NavButton><NavLink href="/">Home</NavLink></NavButton><br />
         <NavButton><NavLink href="/all">All Podcasts</NavLink></NavButton><br />
-        <NavButton>Saved Podcasts</NavButton><br />
+        <NavButton>Subscribed Podcasts</NavButton><br />
         <NavButton>Help</NavButton><br />
         <NavButton>About Us</NavButton><br />
     </nav>

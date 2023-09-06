@@ -47,6 +47,7 @@ const loadHandler = () => {
         <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
         <Route path="/:id" element={<PodcastContainer/>}/> 
         <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/>
+        <Route path="/subscribed" element={<AllPodcastsContainer podcasts={podcasts} />}/>
       </Route>
 
     </Routes>
