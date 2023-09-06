@@ -20,9 +20,20 @@ const Title = styled.h1`
 `
 
 const SearchBar = styled.input`
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  padding: 5px;
+  margin: 5px;
+  border:0;
+  border-radius:10px;
+  box-shadow: 0 0 2px 2px #32334D;
+  background-color: #484a71;
+  color: #FC984C;
+  &&:focus{
+    outline: 1px solid #32334D;
+    box-shadow: 0 0 10px 4px #32334D;
+  }
+  &&::placeholder {
+    color: #fc984cba ;
+  }
 `
 
 const GridComponent = ({podcasts}) => {
