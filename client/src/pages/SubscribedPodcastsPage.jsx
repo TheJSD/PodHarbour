@@ -8,7 +8,7 @@ import { getAllUsers } from '../services/UserServices'
 const SubscribedPodcastsPage = () => {
 
   const [podcasts, setPodcasts] = useState([])
-  const [subscribedPodcasts, setSubscribedPodcasts] = useState([])
+  const [subscribedPodcasts, setSubscribedPodcasts] = useState(null)
   const [user, setUser] = useState(null)
 
   useEffect(() => {
@@ -17,11 +17,13 @@ const SubscribedPodcastsPage = () => {
   }, [])
 
   useEffect(() => {
-    const subscribedList = podcasts.filter((podcast) => {
-      if (user.subscriptions.indexOf(podcast._id) > -1) {
-      return podcast}
-      })
-    setSubscribedPodcasts(subscribedList)
+    if (user) {
+      const subscribedList = podcasts.filter((podcast) => {
+        if (user.subscriptions.indexOf(podcast._id) > -1) {
+        return podcast}
+        })
+      setSubscribedPodcasts(subscribedList)
+    }
   }, [user, podcasts])
   
 
@@ -37,7 +39,7 @@ const SubscribedPodcastsPage = () => {
 
   return (
     <>
-      {subscribedPodcasts.length < 1? (
+      {!subscribedPodcasts ? (
         <h1>LOADING</h1>
       ) : ( 
         <>
