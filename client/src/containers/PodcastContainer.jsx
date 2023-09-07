@@ -1,7 +1,7 @@
 import "../App.css"
 import EpisodesGrid from "../components/EpisodesGrid"
 import NavBar from "../components/NavBar"
-import Placeholder from '../assets/150.png'
+import Placeholder from '../local_images/150.png'
 import { useParams, useLocation } from 'react-router-dom'
 import { podcastsURL } from "../App"
 import { useEffect, useState } from "react"
@@ -73,7 +73,7 @@ import { Button } from "../components/styles/Button.style"
     <>
     <EpisodeOuterWrapper>
     <EpisodeWrapper>
-    <EpisodeImage src={Placeholder}></EpisodeImage><br />
+    <EpisodeImage src={`assets/podcast_images/${podcast.image}.png`}  alt={Placeholder}></EpisodeImage><br />
       <h1>{podcast.name}</h1>
             {podcast.genre}
       <i><h2>{podcast.author}</h2></i>

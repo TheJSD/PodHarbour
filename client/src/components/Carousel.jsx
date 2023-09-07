@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Placeholder from '../assets/150.png'
+import Placeholder from '../local_images/150.png'
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
 
