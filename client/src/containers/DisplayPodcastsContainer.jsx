@@ -4,13 +4,13 @@ import GridComponent from '../components/GridComponent'
 
 
 
-const DisplayPodcastsContainer = ({podcasts}) => {
+const DisplayPodcastsContainer = ({podcasts, titleText}) => {
 
   return (
     <>
     <div className="background">
     <NavBar/>
-    <GridComponent podcasts={podcasts}/>
+    <GridComponent podcasts={podcasts} titleText={titleText}/>
     </div>
     </>
   )

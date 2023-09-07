@@ -17,7 +17,7 @@ const AllPodcastsPage = () => {
   }  
 
   return (
-    <AllPodcastsContainer podcasts={podcasts}/>
+    <AllPodcastsContainer podcasts={podcasts} titleText={"All Podcasts"}/>
   )
 }
 

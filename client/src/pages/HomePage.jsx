@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import HomeContainer from '../containers/HomeContainer'
-// import { fetchPodcasts } from '../services/PodcastsServices'
 import { getAllPodcasts } from '../services/PodcastsServices'
 
 const HomePage = () => {
@@ -14,7 +13,6 @@ const HomePage = () => {
   const fetchPodcasts = () => {
     getAllPodcasts()
     .then(data => setPodcasts(data))
-    .then(() => setLoading(false));
   }  
 
   return (
