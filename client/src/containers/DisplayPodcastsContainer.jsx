@@ -4,7 +4,7 @@ import GridComponent from '../components/GridComponent'
 
 
 
-const AllPodcastsContainer = ({podcasts}) => {
+const DisplayPodcastsContainer = ({podcasts}) => {
 
   return (
     <>
@@ -16,4 +16,4 @@ const AllPodcastsContainer = ({podcasts}) => {
   )
 }
 
-export default AllPodcastsContainer
+export default DisplayPodcastsContainer

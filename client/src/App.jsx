@@ -6,7 +6,7 @@ import Placeholder from './assets/150.png'
 import { Routes, Route, Outlet, Link, BrowserRouter } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
 import PodcastContainer from './containers/PodcastContainer';
-import AllPodcastsContainer from './containers/AllPodcastsContainer';
+import AllPodcastsContainer from './containers/DisplayPodcastsContainer';
 import Home from './pages/Home';
 import AllPodcasts from './pages/AllPodcasts';
 

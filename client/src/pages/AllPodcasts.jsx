@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import AllPodcastsContainer from '../containers/AllPodcastsContainer'
+import AllPodcastsContainer from '../containers/DisplayPodcastsContainer'
 import { getAllPodcasts } from '../services/PodcastsServices'
 
 const AllPodcasts = () => {
