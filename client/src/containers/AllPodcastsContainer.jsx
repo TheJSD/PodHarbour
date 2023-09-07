@@ -3,7 +3,11 @@ import NavBar from '../components/NavBar'
 import GridContainer from '../components/GridComponent'
 
 
-const AllPodcastsContainer = ({podcasts}) => {
+const AllPodcastsContainer = ({podcasts, user}) => {
+
+  if(!user && podcasts.length == 0) {
+    return "Loading"
+  }
 
   return (
     <>

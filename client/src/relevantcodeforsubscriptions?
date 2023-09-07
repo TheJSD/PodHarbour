@@ -1,0 +1,27 @@
+const [user, setUser] = useState(null)
+const [subscribedPodcasts, setSubscribedPodcasts] = useState([])
+
+const fetchPodcasts = () => {
+  fetch(podcastsURL)
+  .then(response => response.json())
+  .then(data => setPodcasts(data))
+}  
+
+const fetchUser = () => {
+  fetch(usersURL)
+    .then(response => response.json())
+    .then(data => setUser(data[0]))
+}
+
+
+const loadHandler = () => {
+  Promise.all([fetchPodcasts(), fetchUser()]).then(()=> {
+    const subscribedList = podcasts.filter((podcast) => {
+      if (user.subscriptions.indexOf(podcast._id) > -1) {
+      return podcast}
+    })
+    setSubscribedPodcasts(subscribedList)
+
+    setLoading(false)
+  })
+}

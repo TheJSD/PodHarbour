@@ -3,7 +3,7 @@ import './App.css'
 import Hero from './assets/Hero.png'
 import GridContainer from './components/GridComponent';
 import Placeholder from './assets/150.png'
-import { Routes, Route, Outlet, Link } from 'react-router-dom'
+import { Routes, Route, Outlet, Link, renderMatches } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
 import PodcastContainer from './containers/PodcastContainer';
 import AllPodcastsContainer from './containers/AllPodcastsContainer';
@@ -15,9 +15,8 @@ function App() {
 
 const [podcasts, setPodcasts] = useState([])
 const [loading, setLoading] = useState(true);
-const [user, setUser] = useState({})
-
-
+const [user, setUser] = useState(null)
+const [subscribedPodcasts, setSubscribedPodcasts] = useState([])
 
 useEffect(() => {
   loadHandler()
@@ -35,8 +34,17 @@ const fetchUser = () => {
     .then(data => setUser(data[0]))
 }
 
+
 const loadHandler = () => {
-  Promise.all([fetchPodcasts(), fetchUser()]).then(()=> setLoading(false))
+  Promise.all([fetchPodcasts(), fetchUser()]).then(()=> {
+    const subscribedList = podcasts.filter((podcast) => {
+      if (user.subscriptions.indexOf(podcast._id) > -1) {
+      return podcast}
+    })
+    setSubscribedPodcasts(subscribedList)
+
+    setLoading(false)
+  })
 }
 
 
@@ -46,8 +54,8 @@ const loadHandler = () => {
       <Route path="/">
         <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
         <Route path="/:id" element={<PodcastContainer/>}/> 
-        <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/>
-        <Route path="/subscribed" element={<AllPodcastsContainer podcasts={podcasts} />}/>
+        <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} Title={"All Podcasts"}/>}/>
+        <Route path="/subscribed" element={<AllPodcastsContainer podcasts={subscribedPodcasts} user={user} format={"Subscribed Podcasts"} />}/>
       </Route>
 
     </Routes>
