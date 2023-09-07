@@ -68,14 +68,14 @@ const Carousel = ({podcasts}) => {
     <>
     <PodcastList>
     <ul>
-    {caroMax <= 6 ? null : <PodcastButton onClick={prevCaro}className="button-caro">&#8678;</PodcastButton>}
+    {caroMax <= 6 ? null : <PodcastButton onClick={prevCaro}>&#8678;</PodcastButton>}
     {caroDisp.length ? caroDisp.map((podcast, index) =>
     <Podcast key={podcast._id}>
     <PodcastTitle>
     <Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}><PodcastImg src={`assets/podcast_images/${podcast.image}.png`} alt={Placeholder}></PodcastImg></Link><br />
     <b><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
     <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}
-    {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}className="button-caro">&#8680;</PodcastButton> : null}
+    {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}>&#8680;</PodcastButton> : null}
     </ul>
     </PodcastList>
     </>)

@@ -69,7 +69,7 @@ const GridComponent = ({podcasts, titleText}) => {
     {gridItems}
     </FlexContainer> }:
     
-   
+
 
     </>
   )
