@@ -11,7 +11,7 @@ const OuterEpisode = styled.div`
 
 const EpisodesGrid = ({episodes}) => {
 
-  console.log (episodes)
+  console.log ("loaded")
     const gridItems = episodes.map((episode) => 
     {return <EpisodeItem episode={episode}/>}
     )
