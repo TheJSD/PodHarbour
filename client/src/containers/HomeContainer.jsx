@@ -7,14 +7,16 @@ import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import { Button } from '../components/styles/Button.style'
 import styled from 'styled-components'
 import HeroBanner from '../components/HeroBanner';
+import Header from '../components/Header'
 import Carousel from "../components/Carousel"
 
 
-const HomeContainer = ({podcasts, loading}) => {
+const HomeContainer = ({podcasts}) => {
 
   return (
     <>
-    <NavBar/>
+    <NavBar />
+    <Header />
     <HeroBanner />
       <Carousel podcasts={podcasts}/>
     <footer>
