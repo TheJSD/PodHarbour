@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AllPodcastsContainer from '../containers/DisplayPodcastsContainer'
 import { getAllPodcasts } from '../services/PodcastsServices'
 
-const AllPodcasts = () => {
+const AllPodcastsPage = () => {
 
   const [podcasts, setPodcasts] = useState([])
 
@@ -21,4 +21,4 @@ const AllPodcasts = () => {
   )
 }
 
-export default AllPodcasts
+export default AllPodcastsPage

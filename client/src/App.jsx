@@ -7,8 +7,9 @@ import { Routes, Route, Outlet, Link, BrowserRouter } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
 import PodcastContainer from './containers/PodcastContainer';
 import AllPodcastsContainer from './containers/DisplayPodcastsContainer';
-import Home from './pages/Home';
-import AllPodcasts from './pages/AllPodcasts';
+import Home from './pages/HomePage';
+import AllPodcasts from './pages/AllPodcastsPage';
+import PodcastPage from './pages/PodcastPage';
 
 export const podcastsURL = "http://localhost:9000/api/podcasts"
 
@@ -34,7 +35,7 @@ function App() {
         <Route path="/">
           <Route index element={<Home/>}/>
           <Route path='all' element={<AllPodcasts/>}/>
-          {/* <Route path="/:id" element={<PodcastContainer/>}/>  */}
+          <Route path="/:id" element={<PodcastPage/>}/> 
           {/* <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/> */}
         </Route>
       </Routes>

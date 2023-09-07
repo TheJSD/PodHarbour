@@ -3,7 +3,7 @@ import HomeContainer from '../containers/HomeContainer'
 // import { fetchPodcasts } from '../services/PodcastsServices'
 import { getAllPodcasts } from '../services/PodcastsServices'
 
-const Home = () => {
+const HomePage = () => {
 
   const [podcasts, setPodcasts] = useState([])
 
@@ -22,4 +22,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
