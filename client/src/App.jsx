@@ -10,6 +10,7 @@ import AllPodcastsContainer from './containers/DisplayPodcastsContainer';
 import Home from './pages/HomePage';
 import AllPodcasts from './pages/AllPodcastsPage';
 import PodcastPage from './pages/PodcastPage';
+import SubscribedPodcastsPage from './pages/SubscribedPodcastsPage';
 
 export const podcastsURL = "http://localhost:9000/api/podcasts"
 const usersURL = "http://localhost:9000/api/users"
@@ -24,6 +25,7 @@ function App() {
           <Route index element={<Home/>}/>
           <Route path='all' element={<AllPodcasts/>}/>
           <Route path="/:id" element={<PodcastPage/>}/> 
+          <Route path="/subscribed" element={<SubscribedPodcastsPage/>}/> 
           {/* <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/> */}
         </Route>
       </Routes>
