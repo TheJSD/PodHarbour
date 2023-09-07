@@ -33,23 +33,23 @@ db.podcasts.insertMany([
         author: "Mystery Software Engineer",
         description: "I joined a company as a Software Engineer and I have no idea what I'm doing. Please don't ask me any coding questions.",
         genre: "Coding",
-        image: '',
+        image: 'IDontKnowHowToCode',
         episodes: [{
             title:"Episode 1: Functions",
             description: "What even are functions? Personally, I don't think they're even real.",
-            image: '',
+            image: 'IDontKnowHowToCode',
             audio: "podcast.mp3"
         },
         {
             title:"Episode 2: React States",
             description: "The only state I understand is that my mental state is declining",
-            image: '',
+            image: 'IDontKnowHowToCode',
             audio: "podcast.mp3"
         },
         {
             title:"Episode 3: For and While Loops",
             description: "That one time I introduced an infinite loop in production and got away with it.",
-            image: '',
+            image: 'IDontKnowHowToCode',
             audio: "podcast.mp3"
         }],
     },
