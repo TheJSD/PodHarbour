@@ -4,16 +4,16 @@ import GridComponent from '../components/GridComponent'
 
 
 
-const AllPodcastsContainer = ({podcasts}) => {
+const DisplayPodcastsContainer = ({podcasts, titleText}) => {
 
   return (
     <>
     <div className="background">
     <NavBar/>
-    <GridComponent podcasts={podcasts}/>
+    <GridComponent podcasts={podcasts} titleText={titleText}/>
     </div>
     </>
   )
 }
 
-export default AllPodcastsContainer
+export default DisplayPodcastsContainer

@@ -6,38 +6,29 @@ import Placeholder from './assets/150.png'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer';
 import PodcastContainer from './containers/PodcastContainer';
-import AllPodcastsContainer from './containers/AllPodcastsContainer';
+import AllPodcastsContainer from './containers/DisplayPodcastsContainer';
+import Home from './pages/HomePage';
+import AllPodcasts from './pages/AllPodcastsPage';
+import PodcastPage from './pages/PodcastPage';
+import SubscribedPodcastsPage from './pages/SubscribedPodcastsPage';
 
 export const podcastsURL = "http://localhost:9000/api/podcasts"
+const usersURL = "http://localhost:9000/api/users"
 
 function App() {
 
-const [podcasts, setPodcasts] = useState([])
-const [loading, setLoading] = useState(true);
 
-
-useEffect(() => {
-  fetchPodcasts()
-}, [])
-
-const fetchPodcasts = () => {
-  fetch(podcastsURL)
-  .then(response => response.json())
-  .then(data => setPodcasts(data))
-  .then(() => setLoading(false));
-}  
 
   return (
-
-    <Routes>
-      <Route path="/">
-        <Route index element={<HomeContainer podcasts={podcasts} loading={loading}/>}/>
-        <Route path="/:id" element={<PodcastContainer/>}/> 
-        <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/>
-        {/* NEED AN ID ROUTE FOR PodcastContainer */}
-      </Route>
-
-    </Routes>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Home/>}/>
+          <Route path='all' element={<AllPodcasts/>}/>
+          <Route path="/:id" element={<PodcastPage/>}/> 
+          <Route path="/subscribed" element={<SubscribedPodcastsPage/>}/> 
+          {/* <Route path="/all" element={<AllPodcastsContainer podcasts={podcasts} />}/> */}
+        </Route>
+      </Routes>
   )
 }
 

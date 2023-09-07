@@ -1,5 +1,5 @@
 import React from 'react'
-import EpisodeItem from '../components/EpisodeItem'
+import EpisodeItem from './EpisodeItem'
 import { FlexContainer } from './styles/FlexContainer.style';
 import styled from 'styled-components'
 

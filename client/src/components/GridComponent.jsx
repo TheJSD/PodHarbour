@@ -36,7 +36,7 @@ const SearchBar = styled.input`
   }
 `
 
-const GridComponent = ({podcasts}) => {
+const GridComponent = ({podcasts, titleText}) => {
 
   const [input, setInput] = useState("")
   
@@ -55,7 +55,7 @@ const GridComponent = ({podcasts}) => {
 
   return (
     <>
-    <Title>All Podcasts</Title>
+    <Title>{titleText}</Title>
     <FlexContainer>
       <SearchBar type="text" placeholder="Search for a Podcast!" onChange={(e) => setInput(e.target.value)} />
     </FlexContainer>
