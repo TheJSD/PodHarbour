@@ -83,7 +83,6 @@ const ButtonUnsub = styled.button`
 
     const [podcast, setPodcast] = useState()
     const [user, setUser] = useState()
-    const [loading, setLoading] = useState(true)
 
     const fetchPodcast = async () => {
       const res = await fetch(`${podcastsURL}/${id}`)
@@ -99,7 +98,6 @@ const ButtonUnsub = styled.button`
 
     useEffect(() => {
       fetchPodcast()
-      .then(() => setLoading(false))
       .then(() => fetchUser());
     }, [])
     
