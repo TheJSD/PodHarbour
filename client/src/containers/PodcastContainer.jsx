@@ -47,6 +47,33 @@ export const usersURL = "http://localhost:9000/api/users/"
   margin-left: 10px;
   `
 
+const ButtonUnsub = styled.button`
+  color: #32334D;
+  background-color: #FC984C;
+  padding: 15px;
+  width: 160px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  border-color: #32334d;
+  border-style: solid;
+  border-radius: 10px;
+  content: "Subscribed";
+  &:hover {
+      background-color: #32334dd7;
+      color: #ffb834;
+      transition: 0.8s;
+      border-color: #32334d00;
+      border-style: solid;
+  }
+  &:hover:before {
+    content: "Unsubscribe";
+  }
+  &:before {
+    content: "Subscribed";
+  }`
+
   const PodcastContainer = () => {
     
     const { id } = useParams()
@@ -56,8 +83,7 @@ export const usersURL = "http://localhost:9000/api/users/"
 
     const [podcast, setPodcast] = useState()
     const [user, setUser] = useState()
-    const [check, setCheck] = useState("")
-    const [loading, setLoading] = useState(true)  
+    const [loading, setLoading] = useState(true)
 
     const fetchPodcast = async () => {
       const res = await fetch(`${podcastsURL}/${id}`)
@@ -65,7 +91,7 @@ export const usersURL = "http://localhost:9000/api/users/"
       setPodcast(data);
     }
 
-    const fetchUser= async () => {
+    const fetchUser = async () => {
       const res = await fetch(usersURL)
       const data =  await res.json();
       setUser(data[0])
@@ -77,33 +103,52 @@ export const usersURL = "http://localhost:9000/api/users/"
       .then(() => fetchUser());
     }, [])
     
-    console.log(user)
-
-    const subscribed = () => {user.subscriptions.find((id) => id === podcast._id) {
-    };
+    const unsubscribe = () => {
+      const updatedUser = { ...user }
+      updatedUser.subscriptions = updatedUser.subscriptions.filter(id => id !== podcast._id);
+      
+      fetch(usersURL + user._id, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedUser),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to update user data');
+        }
+        setUser(updatedUser)
+      })
+      .then(updatedData => {
+        console.log(updatedData);
+      })
+      .catch(error => {
+        console.error('Error updating user data:', error);
+      });
+    }
 
     const subscribe = () => {
-    setCheck(String(podcast._id));
-    console.log(check)
-    setUser(previous => {
-    const shallowCopy = { ...previous };
-    shallowCopy.subscriptions = [podcast._id, ...shallowCopy.subscriptions];
-    return shallowCopy;
-    });
-
-      // let preserve = users._id
-      // usersURL + === "Yes" ? booking.checkedin = "No" : booking.checkedin = "Yes"
-      // delete booking._id
-      // const customerInfo = customerUpdate[index].id
-      // fetch(usersURL, {
-      // method: "PUT",
-      // headers: {"Content-Type": "application/json"},
-      // body: JSON.stringify(user)
-      // });
-  };
-
-
-
+      const updatedUser = { ...user }
+      updatedUser.subscriptions.push(podcast._id)
+      
+      fetch(usersURL + user._id, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedUser),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to update user data');
+        }
+        setUser(updatedUser)
+      })
+      .then(updatedData => {
+        console.log(updatedData);
+      })
+      .catch(error => {
+        console.error('Error updating user data:', error);
+      });
+  
+};
 
   return (
     <>
@@ -116,8 +161,7 @@ export const usersURL = "http://localhost:9000/api/users/"
       <h1>{podcast.name}</h1>
             {podcast.genre}
       <i><h2>{podcast.author}</h2></i>
-      <Button onClick={subscribe}>Subscribe</Button><br />
-      <h2>Subscribed? {user.subscriptions === podcast._id ? "Yes" : "No"}</h2>
+      {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
     <EpisodeDesc>{podcast.description}</EpisodeDesc>
     </EpisodeWrapper>
     </EpisodeOuterWrapper>
