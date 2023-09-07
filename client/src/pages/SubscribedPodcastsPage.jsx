@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import AllPodcastsContainer from '../containers/DisplayPodcastsContainer'
+import DisplayPodcastsContainer from '../containers/DisplayPodcastsContainer'
 import { getAllPodcasts } from '../services/PodcastsServices'
 import { getAllUsers } from '../services/UserServices'
 
@@ -41,7 +41,7 @@ const SubscribedPodcastsPage = () => {
         <h1>LOADING</h1>
       ) : ( 
         <>
-        <AllPodcastsContainer podcasts = {subscribedPodcasts}/>
+        <DisplayPodcastsContainer podcasts = {subscribedPodcasts} titleText={'Subscribed Podcasts'}/>
         </>
       )}
     </>
