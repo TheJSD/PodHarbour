@@ -33,7 +33,7 @@ db.podcasts.insertMany([
         author: "Mystery Software Engineer",
         description: "I joined a company as a Software Engineer and I have no idea what I'm doing. Please don't ask me any coding questions.",
         genre: "Coding",
-        image: 'animals',
+        image: 'IDontKnowHowToCode',
         episodes: [{
             title:"Episode 1: Functions",
             description: "What even are functions? Personally, I don't think they're even real.",
