@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import PodHarbour from '../../assets/site_images/PodHarbour.png'
+import PodHarbour from '../../assets/site_images/Logo_PodHarbour.png'
 import Logo from '../../assets/site_images/Logo_Orange.png'
 
 const HeaderWrapper = styled.header`
