@@ -3,22 +3,56 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
 
-    const PodcastOuter = styled.section`
+    const PodcastOuter = styled.div`
+    margin-top: 20px;
+    text-align:left;
     display: flex;
     justify-content: center;
     align-items: center;
+    ::-webkit-scrollbar {
+        width: 15px; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #ffb834; 
+        border-radius: 5px; 
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #32334d;
+    }
+    ::-webkit-scrollbar:horizontal {
+        height: 10px; 
+    }
+    `
+
+    const End = styled.div`
+    padding-left: 15px;
+    `
+
+    const Featured = styled.h2`
+    padding: 15px;
+    color: #ffb834;
+    margin-left: 16px;
+    position: absolute;
     `
 
     const PodcastList = styled.section`
-    margin-right: 15px;
     justify-content: left;
     list-style: none;
-    `
-        
-    const Scrollbar = styled.section`
     height: 230px;
-    width: 1000px;
-    overflow-x: scroll;`
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    padding-bottom: 25px;
+    background-color: #32334d77;
+    border-radius: 15px;
+    `
+
+    const Listouter = styled.ul`
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 800px;
+    display: flex;
+    justify-content: center;
+    `
 
     const Podcast = styled.li`
     padding: 15px;
@@ -27,12 +61,10 @@ import {Link} from 'react-router-dom'
     width: 150px;
     height: 150px;
     color: #ffb834;
-    margin-top: 20px;
     margin-left: 20px;
     text-align: left;
     font-size: small;
-    border-radius: 20px;
-    `
+    border-radius: 20px;`
 
     const PodcastTitle = styled.section`
     text-align: center;`
@@ -83,18 +115,17 @@ import {Link} from 'react-router-dom'
     <>
     <PodcastOuter>
     <PodcastList>
-    <Scrollbar>
-    <ul>
+    <Featured>Featured Podcasts:</Featured>
+    <Listouter>
     {/* {caroMax <= 6 ? null : <PodcastButton onClick={prevCaro}><Rotate>➤</Rotate></PodcastButton>} */}
     {podcasts.length ? podcasts.map((podcast, index) =>
     <Podcast key={podcast._id}>
     <PodcastTitle>
     <Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}><PodcastImg src={`assets/podcast_images/${podcast.image}.png`} alt={podcast.name}></PodcastImg></Link><br />
     <b><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
-    <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}
+    <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}<End></End>
     {/* {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}>➤</PodcastButton> : null } */}
-    </ul>
-    </Scrollbar>
+    </Listouter>
     </PodcastList>
     </PodcastOuter>
     </>)

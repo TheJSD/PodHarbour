@@ -4,7 +4,7 @@ import HeroImg from '../../assets/site_images/Hero.png'
 import { Button } from './styles/Button.style'
 
     const HeroBase = styled.section`
-    margin-top: 30px;
+    margin-top: 15px;
     justify-content: center;
     padding-top: 20px;
     padding-right: 10px;
