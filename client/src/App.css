@@ -10,11 +10,6 @@ body{
     background-attachment: fixed;
 }
 
-ul{
-    display: flex;
-    justify-content: center;
-}
-
 p{
     text-align: left;
 }
@@ -26,3 +21,6 @@ footer {
     background-color: white;
     font-size: larger;
 }
+
+
+

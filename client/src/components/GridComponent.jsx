@@ -18,6 +18,13 @@ const Title = styled.h1`
   font-size: 50px;
   padding-top: 50px;
   padding-left:100px;
+    padding: 15px;
+    text-align:center;
+    color: #ffb834;
+    font-size: 50px;
+    border-radius: 15px;
+    width: fit-content;
+    background-color: #32334d77;
 `
 
 const SearchBar = styled.input`
@@ -25,15 +32,15 @@ const SearchBar = styled.input`
   margin: 5px;
   border:0;
   border-radius:10px;
-  box-shadow: 0 0 2px 2px #32334D;
-  background-color: #484a71;
-  color: #FC984C;
+  box-shadow: 0 0 2px 2px #32334dd7;
+  background-color: #32334dd7;
+  color: #ffb834;
   &&:focus{
-    outline: 1px solid #32334D;
-    box-shadow: 0 0 10px 4px #32334D;
+    outline: 1px solid #32334dd7;
+    box-shadow: 0 0 10px 4px #32334dd7;
   }
   &&::placeholder {
-    color: #fc984cba ;
+    color: #ffb834 ;
   }
 `
 
@@ -56,7 +63,9 @@ const GridComponent = ({podcasts, titleText}) => {
 
   return (
     <>
+    <FlexContainer>
     <Title>{titleText}</Title>
+    </FlexContainer>
     <FlexContainer>
       <SearchBar type="text" placeholder="Search for a Podcast!" onChange={(e) => setInput(e.target.value)} />
     </FlexContainer>
