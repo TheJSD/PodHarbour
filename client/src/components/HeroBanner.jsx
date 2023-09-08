@@ -1,20 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroImg from '../../assets/site_images/heropicture.png'
+import HeroImg from '../../assets/site_images/heropicture.webp'
 import { Button } from './styles/Button.style'
 
     const HeroBase = styled.section`
     margin-top: 60px;
     justify-content: center;
     padding-top: 40px;
-    padding-right: 10px;
+    padding-right: 40px;
     padding-bottom: 10px;
     padding-left: 5px;
-    width: 800px;
+    width: 830px;
     height: 400px;
     background-color: #32334d77;
     color: #ffb834;
-    padding-right: 50px;
     text-align: center;
     border-radius: 15px;`
 
@@ -23,11 +22,22 @@ import { Button } from './styles/Button.style'
     justify-content: center;
     `
 
-    const HeroPicture = styled.section`
+    const HeroPicture = styled.img`
     float: left;
     height: auto;
-    width: 400px;
-    padding-right: 50px;`
+    width: 350px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;`
+
+    const Herotext = styled.p`
+        `
+    const HeroTitle = styled.h1`
+    font-size: x-large;
+    margin-bottom: 10px;
+    `
+
 
 const HeroBanner = () => {
 
@@ -35,9 +45,14 @@ const HeroBanner = () => {
         <>
         <HeroContainer>
             <HeroBase>
-            <HeroPicture><img src={HeroImg}></img></HeroPicture>
-            <h2>Welcome to PodHarbour!</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <HeroPicture src={HeroImg}></HeroPicture>
+            <HeroTitle>Welcome to PodHarbour!</HeroTitle>
+            <Herotext>Hello, you have reached PodHarbour! Your one stop internet shop for all your Podcast needs!</Herotext><br />
+            
+            <Herotext>On this website you will find the only the best, hand-picked, selection of awesome audio to keep you entertained and informed, be it on the bus, in the car, 
+            when exercising or just lounging around the house. Our team works day and night to provide the best content for your listening ears!</Herotext><br />
+
+            <Herotext>So what are you waiting for? Take a look around and enjoy your stay here at our calm little corner of the internet.</Herotext>
         </HeroBase>
         </HeroContainer>
     </>)
