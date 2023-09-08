@@ -1,7 +1,6 @@
 import "../App.css"
 import EpisodesGrid from "../components/EpisodesGrid"
 import NavBar from "../components/NavBar"
-import Placeholder from '../local_images/150.png'
 import { useParams, useLocation } from 'react-router-dom'
 import { podcastsURL } from "../App"
 import { useEffect, useState } from "react"
