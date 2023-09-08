@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import placeholder from '../local_images/150.png'
 
     const Episode = styled.li`
     padding: 1%;
