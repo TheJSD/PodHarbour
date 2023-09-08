@@ -12,12 +12,11 @@ export const usersURL = "http://localhost:9000/api/users/"
   const EpisodeOuterWrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin: 40px;
   `
-
   const EpisodeWrapper = styled.div`
+  margin-top: 60px;
+  margin-bottom: 20px;
   line-height: 250%;
-  margin-top: 30px;
   text-align: center;
   padding-left: 0.5%;
   width: 800px;
@@ -26,7 +25,6 @@ export const usersURL = "http://localhost:9000/api/users/"
   color: #ffb834;
   padding-right: 50px;
   border-radius: 15px;
-  margin-bottom: 16px;
   `
   const EpisodeImage = styled.img`
   float:left;

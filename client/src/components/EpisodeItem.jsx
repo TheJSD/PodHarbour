@@ -10,7 +10,7 @@ import styled from 'styled-components'
     color: #ffb834;
     margin-left: 1%;
     margin-right: 1%;
-    margin-top: 0.5%;
+    margin-bottom: 20px;
     text-align: left;
     font-size: small;
     border-radius: 20px;`

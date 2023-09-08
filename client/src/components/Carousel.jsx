@@ -9,9 +9,6 @@ import {Link} from 'react-router-dom'
     display: flex;
     justify-content: center;
     align-items: center;
-    ::-webkit-scrollbar {
-        width: 15px; 
-    }
     ::-webkit-scrollbar-thumb {
         background-color: #ffb834; 
         border-radius: 5px; 

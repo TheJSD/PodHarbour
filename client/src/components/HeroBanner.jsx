@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroImg from '../../assets/site_images/Hero.png'
+import HeroImg from '../../assets/site_images/heropicture.png'
 import { Button } from './styles/Button.style'
 
     const HeroBase = styled.section`
