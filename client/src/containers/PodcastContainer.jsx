@@ -155,7 +155,7 @@ const ButtonUnsub = styled.button`
     <>
     <EpisodeOuterWrapper>
     <EpisodeWrapper>
-    <EpisodeImage src={`assets/podcast_images/${podcast.image}.png`}  alt={Placeholder}></EpisodeImage><br />
+    <EpisodeImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></EpisodeImage><br />
       <h1>{podcast.name}</h1>
             {podcast.genre}
       <i><h2>{podcast.author}</h2></i>

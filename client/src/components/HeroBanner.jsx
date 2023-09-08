@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroImg from '../local_images/150.png'
+import HeroImg from '../local_images/Hero.png'
 import { Button } from './styles/Button.style'
 
     const HeroBase = styled.section`
-    margin-top: 30px;
+    margin-top: 15px;
     justify-content: center;
     padding-top: 20px;
     padding-right: 10px;

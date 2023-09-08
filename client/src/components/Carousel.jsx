@@ -1,46 +1,55 @@
 import React from 'react'
 import styled from 'styled-components'
-import Placeholder from '../local_images/150.png'
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
 
     const PodcastOuter = styled.div`
+    margin-top: 20px;
+    text-align:left;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* Style the horizontal scrollbar */
     ::-webkit-scrollbar {
-        width: 15px; /* Adjust the width as needed */
+        width: 15px; 
     }
-
     ::-webkit-scrollbar-thumb {
-        background-color: #ffb834; /* Change this to your desired scrollbar thumb color */
-        border-radius: 5px; /* Optional: Add some border radius for a rounded look */
+        background-color: #ffb834; 
+        border-radius: 5px; 
     }
-
     ::-webkit-scrollbar-track {
-        background-color: #32334d; /* Change this to your desired scrollbar track color */
+        background-color: #32334d;
     }
-
-    /* Style the horizontal scrollbar */
     ::-webkit-scrollbar:horizontal {
-        height: 10px; /* Adjust the height as needed */
+        height: 10px; 
     }
     `
 
+    const End = styled.div`
+    padding-left: 15px;
+    `
+
+    const Featured = styled.h2`
+    padding: 15px;
+    color: #ffb834;
+    margin-left: 16px;
+    position: absolute;
+    `
+
     const PodcastList = styled.section`
-    margin-left: 170px;
-    margin-right: 170px;
     justify-content: left;
     list-style: none;
     height: 230px;
     overflow-x: scroll;
     overflow-y: hidden; 
+    padding-bottom: 25px;
+    background-color: #32334d77;
+    border-radius: 15px;
     `
 
     const Listouter = styled.ul`
-    margin-left: 850px;
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 800px;
     display: flex;
     justify-content: center;
     `
@@ -52,7 +61,6 @@ import {Link} from 'react-router-dom'
     width: 150px;
     height: 150px;
     color: #ffb834;
-    margin-top: 20px;
     margin-left: 20px;
     text-align: left;
     font-size: small;
@@ -107,6 +115,7 @@ import {Link} from 'react-router-dom'
     <>
     <PodcastOuter>
     <PodcastList>
+    <Featured>Featured Podcasts:</Featured>
     <Listouter>
     {/* {caroMax <= 6 ? null : <PodcastButton onClick={prevCaro}><Rotate>➤</Rotate></PodcastButton>} */}
     {podcasts.length ? podcasts.map((podcast, index) =>
@@ -114,7 +123,7 @@ import {Link} from 'react-router-dom'
     <PodcastTitle>
     <Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}><PodcastImg src={`assets/podcast_images/${podcast.image}.png`} alt={podcast.name}></PodcastImg></Link><br />
     <b><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
-    <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}
+    <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}<End></End>
     {/* {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}>➤</PodcastButton> : null } */}
     </Listouter>
     </PodcastList>

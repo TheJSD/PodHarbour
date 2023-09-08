@@ -10,7 +10,7 @@ const ItemWrapper = styled.div`
   width:220px;
   height:250px;
   background-color:#32334dd7;
-  color: #FC984C;
+  color: #ffb834;
   font-size:small;
   border-radius: 20px;
   gap:0.5rem;
