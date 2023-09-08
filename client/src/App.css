@@ -19,11 +19,6 @@ p{
     text-align: left;
 }
 
-.nav {
-    position: fixed;
-    margin-left: 1%;
-}
-
 footer {
     position: fixed;
     bottom: 0;
