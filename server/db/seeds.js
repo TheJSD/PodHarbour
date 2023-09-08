@@ -33,7 +33,7 @@ db.podcasts.insertMany([
         author: "Mystery Software Engineer",
         description: "I joined a company as a Software Engineer and I have no idea what I'm doing. Please don't ask me any coding questions.",
         genre: "Coding",
-        image: 'IDontKnowHowToCode',
+        image: 'animals',
         episodes: [{
             title:"Episode 1: Functions",
             description: "What even are functions? Personally, I don't think they're even real.",
@@ -123,21 +123,24 @@ db.podcasts.insertMany([
         author: "Kirsty Crunch",
         description: "Listen in as we crunch on some foods",
         genre: "Food",
-        image: '',
+        image: 'CrunchCast',
         episodes: [
             {
                 title: 'Crisps',
                 description: 'On this episode we crunch on a packet of crisps',
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Biscuits',
                 description: "On this episode we crunch on a packet of biscuits",
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Hot Chocolate',
                 description: 'As a twist, on this episode we sip on some hot chocolate',
+                image: 'CrunchCast',
                 audio: ''
             }
         ]
@@ -148,21 +151,24 @@ db.podcasts.insertMany([
         author: "Kirsty Crunch",
         description: "Listen in as we crunch on some foods",
         genre: "Food",
-        image: '',
+        image: 'CrunchCast',
         episodes: [
             {
                 title: 'Crisps',
                 description: 'On this episode we crunch on a packet of crisps',
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Biscuits',
                 description: "On this episode we crunch on a packet of biscuits",
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Hot Chocolate',
                 description: 'As a twist, on this episode we sip on some hot chocolate',
+                image: 'CrunchCast',
                 audio: ''
             }
         ]
@@ -173,21 +179,24 @@ db.podcasts.insertMany([
         author: "Kirsty Crunch",
         description: "Listen in as we crunch on some foods",
         genre: "Food",
-        image: '',
+        image: 'CrunchCast',
         episodes: [
             {
                 title: 'Crisps',
                 description: 'On this episode we crunch on a packet of crisps',
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Biscuits',
                 description: "On this episode we crunch on a packet of biscuits",
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Hot Chocolate',
                 description: 'As a twist, on this episode we sip on some hot chocolate',
+                image: 'CrunchCast',
                 audio: ''
             }
         ]
@@ -198,21 +207,24 @@ db.podcasts.insertMany([
         author: "Kirsty Crunch",
         description: "Listen in as we crunch on some foods",
         genre: "Food",
-        image: '',
+        image: 'CrunchCast',
         episodes: [
             {
                 title: 'Crisps',
                 description: 'On this episode we crunch on a packet of crisps',
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Biscuits',
                 description: "On this episode we crunch on a packet of biscuits",
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Hot Chocolate',
                 description: 'As a twist, on this episode we sip on some hot chocolate',
+                image: 'CrunchCast',
                 audio: ''
             }
         ]
@@ -223,21 +235,24 @@ db.podcasts.insertMany([
         author: "Kirsty Crunch",
         description: "Listen in as we crunch on some foods",
         genre: "Food",
-        image: '',
+        image: 'CrunchCast',
         episodes: [
             {
                 title: 'Crisps',
                 description: 'On this episode we crunch on a packet of crisps',
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Biscuits',
                 description: "On this episode we crunch on a packet of biscuits",
+                image: 'CrunchCast',
                 audio: ''
             },
             {
                 title: 'Hot Chocolate',
                 description: 'As a twist, on this episode we sip on some hot chocolate',
+                image: 'CrunchCast',
                 audio: ''
             }
         ]

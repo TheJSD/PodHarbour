@@ -30,7 +30,7 @@ const EpisodeItem = ({episode}) => {
 
   return (
       <Episode>
-        <EpisodeImage src={`assets/podcast_images/${episode.image}.png`} alt={placeholder}></EpisodeImage>
+        <EpisodeImage src={`assets/podcast_images/${episode.image}.png`} alt={episode.title}></EpisodeImage>
           <EpisodeTitle><b>{episode.title}</b></EpisodeTitle><br/>
         <div>{episode.description}</div>
       </Episode>
