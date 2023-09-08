@@ -1,6 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
+const NavWrapper = styled.nav`
+    position: fixed;
+    margin-left: 1%;
+    padding-top: 40px;
+`
 const NavButton = styled.button`
 background: transparent;
 padding: 15px;
@@ -39,13 +44,13 @@ const NavLink = styled.a`
 const NavBar = () => {
 
   return (
-    <nav className="nav">
-        <NavButton><NavLink href="/">Home</NavLink></NavButton><br />
-        <NavButton><NavLink href="/all">All Podcasts</NavLink></NavButton><br />
-        <NavButton><NavLink href="/subscribed">Subscribed Podcasts</NavLink></NavButton><br />
+    <NavWrapper>
+        <NavLink href="/"><NavButton>Home</NavButton></NavLink><br />
+        <NavLink href="/all"><NavButton>All Podcasts</NavButton></NavLink><br />
+        <NavLink href="/subscribed"><NavButton>Subscribed Podcasts</NavButton></NavLink><br />
         <NavButton>Help</NavButton><br />
         <NavButton>About Us</NavButton><br />
-    </nav>
+    </NavWrapper>
   )
 }
 

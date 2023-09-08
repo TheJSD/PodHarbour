@@ -12,15 +12,13 @@ export const usersURL = "http://localhost:9000/api/users/"
   const EpisodeOuterWrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin: 40px;
   `
 
   const EpisodeWrapper = styled.div`
   line-height: 250%;
   margin-top: 30px;
   text-align: center;
-  padding-right: 1%;
-  padding-bottom: 3%;
   padding-left: 0.5%;
   width: 800px;
   height: 400px;
@@ -33,10 +31,10 @@ export const usersURL = "http://localhost:9000/api/users/"
   const EpisodeImage = styled.img`
   float:left;
   height:auto;
-  width: 240px;
-  border-radius:10px;
-  margin-top: 50px;
-  margin-left: 5%;
+  width: 260px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
   `
 
   const EpisodeDesc = styled.div`
@@ -149,7 +147,6 @@ const ButtonUnsub = styled.button`
 
   return (
     <>
-    <NavBar/>
     {user ? 
     <>
     <EpisodeOuterWrapper>

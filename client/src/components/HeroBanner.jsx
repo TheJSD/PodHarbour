@@ -4,9 +4,9 @@ import HeroImg from '../../assets/site_images/Hero.png'
 import { Button } from './styles/Button.style'
 
     const HeroBase = styled.section`
-    margin-top: 15px;
+    margin-top: 60px;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
@@ -21,7 +21,7 @@ import { Button } from './styles/Button.style'
     const HeroContainer = styled.section`
     display: flex;
     justify-content: center;
-    margin-top: 50px;`
+    `
 
     const HeroPicture = styled.section`
     float: left;

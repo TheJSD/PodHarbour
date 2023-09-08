@@ -13,6 +13,11 @@ const FlexContainer = styled.div`
 `
 
 const Title = styled.h1`
+  text-align:center;
+  color: #32334D;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-left:100px;
     padding: 15px;
     text-align:center;
     color: #ffb834;

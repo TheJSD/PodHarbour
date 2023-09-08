@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NavBar from '../components/NavBar'
 import GridComponent from '../components/GridComponent'
-
-
 
 const DisplayPodcastsContainer = ({podcasts, titleText}) => {
 
   return (
     <>
-    <div className="background">
-    <NavBar/>
     <GridComponent podcasts={podcasts} titleText={titleText}/>
-    </div>
     </>
   )
 }
