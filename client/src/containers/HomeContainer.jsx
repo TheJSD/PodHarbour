@@ -1,8 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
-import Placeholder from '../assets/150.png'
 import NavBar from '../components/NavBar';
-import { Routes, Route, Outlet, Link } from 'react-router-dom'
 // import { HeroContainer } from '../components/styles/HeroContainer.style';
 import { Button } from '../components/styles/Button.style'
 import styled from 'styled-components'

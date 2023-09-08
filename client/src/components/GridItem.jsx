@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Placeholder from '../assets/150.png'
+import Placeholder from '../local_images/150.png'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 
 
@@ -44,7 +44,7 @@ const GridItem = ({podcast}) => {
   return (
     <Link style={{textDecoration: 'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>
     <ItemWrapper>
-        <PodcastImage src={Placeholder}/>
+        <PodcastImage src={`assets/podcast_images/${podcast.image}.png`} alt={Placeholder}/>
         <PodcastTitle>
           {podcast.name}
         </PodcastTitle>

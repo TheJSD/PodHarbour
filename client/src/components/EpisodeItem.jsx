@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import placeholder from '../assets/150.png'
+import placeholder from '../local_images/150.png'
 
     const Episode = styled.li`
     padding: 1%;
@@ -30,7 +30,7 @@ const EpisodeItem = ({episode}) => {
 
   return (
       <Episode>
-        <EpisodeImage src={placeholder}></EpisodeImage>
+        <EpisodeImage src={`assets/podcast_images/${episode.image}.png`} alt={episode.title}></EpisodeImage>
           <EpisodeTitle><b>{episode.title}</b></EpisodeTitle><br/>
         <div>{episode.description}</div>
       </Episode>

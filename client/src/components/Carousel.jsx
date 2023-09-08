@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Placeholder from '../assets/150.png'
+import Placeholder from '../local_images/150.png'
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
 
@@ -90,7 +90,7 @@ import {Link} from 'react-router-dom'
     {podcasts.length ? podcasts.map((podcast, index) =>
     <Podcast key={podcast._id}>
     <PodcastTitle>
-    <Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}><PodcastImg src={Placeholder}></PodcastImg></Link><br />
+    <Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}><PodcastImg src={`assets/podcast_images/${podcast.image}.png`} alt={podcast.name}></PodcastImg></Link><br />
     <b><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
     <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}
     {/* {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}>➤</PodcastButton> : null } */}
