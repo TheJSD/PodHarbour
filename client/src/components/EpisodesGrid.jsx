@@ -1,6 +1,5 @@
 import React from 'react'
 import EpisodeItem from './EpisodeItem'
-import { FlexContainer } from './styles/FlexContainer.style';
 import styled from 'styled-components'
 
 const OuterEpisode = styled.div`

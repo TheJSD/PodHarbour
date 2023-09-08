@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from '../assets/Logo_Orange.png'
+import Logo from '../local_images/Logo_Orange.png'
 
 const HeaderWrapper = styled.header`
   background-color: #32334dd7;
