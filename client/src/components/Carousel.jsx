@@ -4,22 +4,46 @@ import Placeholder from '../assets/150.png'
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
 
-    const PodcastOuter = styled.section`
+    const PodcastOuter = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Style the horizontal scrollbar */
+    ::-webkit-scrollbar {
+        width: 15px; /* Adjust the width as needed */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #ffb834; /* Change this to your desired scrollbar thumb color */
+        border-radius: 5px; /* Optional: Add some border radius for a rounded look */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #32334d; /* Change this to your desired scrollbar track color */
+    }
+
+    /* Style the horizontal scrollbar */
+    ::-webkit-scrollbar:horizontal {
+        height: 10px; /* Adjust the height as needed */
+    }
     `
 
     const PodcastList = styled.section`
-    margin-right: 15px;
+    margin-left: 170px;
+    margin-right: 170px;
     justify-content: left;
     list-style: none;
-    `
-        
-    const Scrollbar = styled.section`
     height: 230px;
-    width: 1000px;
-    overflow-x: scroll;`
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    `
+
+    const Listouter = styled.ul`
+    margin-left: 850px;
+    display: flex;
+    justify-content: center;
+    `
 
     const Podcast = styled.li`
     padding: 15px;
@@ -32,8 +56,7 @@ import {Link} from 'react-router-dom'
     margin-left: 20px;
     text-align: left;
     font-size: small;
-    border-radius: 20px;
-    `
+    border-radius: 20px;`
 
     const PodcastTitle = styled.section`
     text-align: center;`
@@ -84,8 +107,7 @@ import {Link} from 'react-router-dom'
     <>
     <PodcastOuter>
     <PodcastList>
-    <Scrollbar>
-    <ul>
+    <Listouter>
     {/* {caroMax <= 6 ? null : <PodcastButton onClick={prevCaro}><Rotate>➤</Rotate></PodcastButton>} */}
     {podcasts.length ? podcasts.map((podcast, index) =>
     <Podcast key={podcast._id}>
@@ -94,8 +116,7 @@ import {Link} from 'react-router-dom'
     <b><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.name}</Link></b><br />
     <i><Link style={{textDecoration:'none', color:'inherit'}} to={`/${podcast._id}`} state={{podcastObject: podcast}}>{podcast.author}</Link></i></PodcastTitle><br /></Podcast>) : "loading"}
     {/* {caroDisp.length === 5 ? <PodcastButton onClick={nextCaro}>➤</PodcastButton> : null } */}
-    </ul>
-    </Scrollbar>
+    </Listouter>
     </PodcastList>
     </PodcastOuter>
     </>)
