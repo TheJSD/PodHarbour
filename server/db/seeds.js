@@ -103,7 +103,132 @@ db.podcasts.insertMany([
             }
         ]
         
-    }
+    },
+    {
+        name: "CrunchCast2",
+        author: "Kirsty Crunch",
+        description: "Listen in as we crunch on some foods",
+        genre: "Food",
+        image: '',
+        episodes: [
+            {
+                title: 'Crisps',
+                description: 'On this episode we crunch on a packet of crisps',
+                audio: ''
+            },
+            {
+                title: 'Biscuits',
+                description: "On this episode we crunch on a packet of biscuits",
+                audio: ''
+            },
+            {
+                title: 'Hot Chocolate',
+                description: 'As a twist, on this episode we sip on some hot chocolate',
+                audio: ''
+            }
+        ]
+        
+    },
+    {
+        name: "CrunchCast3",
+        author: "Kirsty Crunch",
+        description: "Listen in as we crunch on some foods",
+        genre: "Food",
+        image: '',
+        episodes: [
+            {
+                title: 'Crisps',
+                description: 'On this episode we crunch on a packet of crisps',
+                audio: ''
+            },
+            {
+                title: 'Biscuits',
+                description: "On this episode we crunch on a packet of biscuits",
+                audio: ''
+            },
+            {
+                title: 'Hot Chocolate',
+                description: 'As a twist, on this episode we sip on some hot chocolate',
+                audio: ''
+            }
+        ]
+        
+    },
+    {
+        name: "CrunchCast4",
+        author: "Kirsty Crunch",
+        description: "Listen in as we crunch on some foods",
+        genre: "Food",
+        image: '',
+        episodes: [
+            {
+                title: 'Crisps',
+                description: 'On this episode we crunch on a packet of crisps',
+                audio: ''
+            },
+            {
+                title: 'Biscuits',
+                description: "On this episode we crunch on a packet of biscuits",
+                audio: ''
+            },
+            {
+                title: 'Hot Chocolate',
+                description: 'As a twist, on this episode we sip on some hot chocolate',
+                audio: ''
+            }
+        ]
+        
+    },
+    {
+        name: "CrunchCast5",
+        author: "Kirsty Crunch",
+        description: "Listen in as we crunch on some foods",
+        genre: "Food",
+        image: '',
+        episodes: [
+            {
+                title: 'Crisps',
+                description: 'On this episode we crunch on a packet of crisps',
+                audio: ''
+            },
+            {
+                title: 'Biscuits',
+                description: "On this episode we crunch on a packet of biscuits",
+                audio: ''
+            },
+            {
+                title: 'Hot Chocolate',
+                description: 'As a twist, on this episode we sip on some hot chocolate',
+                audio: ''
+            }
+        ]
+        
+    },
+    {
+        name: "CrunchCast6",
+        author: "Kirsty Crunch",
+        description: "Listen in as we crunch on some foods",
+        genre: "Food",
+        image: '',
+        episodes: [
+            {
+                title: 'Crisps',
+                description: 'On this episode we crunch on a packet of crisps',
+                audio: ''
+            },
+            {
+                title: 'Biscuits',
+                description: "On this episode we crunch on a packet of biscuits",
+                audio: ''
+            },
+            {
+                title: 'Hot Chocolate',
+                description: 'As a twist, on this episode we sip on some hot chocolate',
+                audio: ''
+            }
+        ]
+        
+    },
 ])
 
 db.users.insertOne({
