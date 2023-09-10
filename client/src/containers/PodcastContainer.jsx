@@ -12,29 +12,28 @@ export const usersURL = "http://localhost:9000/api/users/"
   const EpisodeOuterWrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin: 40px;
   `
-
   const EpisodeWrapper = styled.div`
-  line-height: 250%;
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  line-height: 280%;
   text-align: center;
-  padding-left: 0.5%;
-  width: 800px;
-  height: 400px;
+  width: 855px;
+  height: 450px;
   background-color: #32334d77;
   color: #ffb834;
-  padding-right: 50px;
   border-radius: 15px;
-  margin-bottom: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
   `
+
   const EpisodeImage = styled.img`
   float:left;
   height:auto;
   width: 260px;
   border-radius: 10px;
-  margin-top: 30px;
-  margin-left: 30px;
+  margin-top: 40px;
+  margin-left: 30px;;
   `
 
   const EpisodeDesc = styled.div`
@@ -42,6 +41,8 @@ export const usersURL = "http://localhost:9000/api/users/"
   text-align: left;
   margin-top: 15px;
   margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   `
 
 const ButtonUnsub = styled.button`
@@ -153,7 +154,7 @@ const ButtonUnsub = styled.button`
     <EpisodeWrapper>
     <EpisodeImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></EpisodeImage><br />
       <h1>{podcast.name}</h1>
-            {podcast.genre}
+            <h2>Genre: {podcast.genre}</h2>
       <i><h2>{podcast.author}</h2></i>
       {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
     <EpisodeDesc>{podcast.description}</EpisodeDesc>

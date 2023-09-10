@@ -2,27 +2,43 @@ import React from 'react'
 import styled from 'styled-components'
 
     const Episode = styled.li`
-    padding: 1%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
     list-style: none;
     background-color: #32334dd7;
-    width: 150px;
-    height: auto;
+    width: 205px;
+    height: 235px;
     color: #ffb834;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 0.5%;
+    margin-right: 15px;
+    margin-bottom: 20px;
     text-align: left;
     font-size: small;
     border-radius: 20px;`
+
+  //     display:flex;
+  // flex-direction:column;
+  // width:220px;
+  // height:250px;
+  // background-color:#32334dd7;
+  // color: #ffb834;
+  // font-size:small;
+  // border-radius: 20px;
+  // gap:0.5rem;
+  // align-items:center;
+  // padding: 5px;
     
     const EpisodeTitle = styled.section`
     text-align: center;`
     
     const EpisodeImage = styled.img`
-     /* height:150px; */
-    height: auto;
-    width: 150px;
-    border-radius: 10px;`
+    height:auto;
+    width: 200px;
+    border-radius:10px;
+    margin-bottom: 10px;
+    margin-top: 2px;`
 
 const EpisodeItem = ({episode}) => {
 
