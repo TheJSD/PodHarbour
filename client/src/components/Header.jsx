@@ -10,9 +10,6 @@ const HeaderWrapper = styled.header`
   top: 0%;
   width:100%;
 `
-const HeaderLogo = styled.img`
-  
-`
 const HeaderLink = styled.a`
   padding: 3px;
   max-width: fit-content;
@@ -22,7 +19,7 @@ const Header = () => {
   return (
     <>
     <HeaderWrapper>
-      <HeaderLink href="/"><HeaderLogo src={Logo} width ="40" height="29"></HeaderLogo> <img src={PodHarbour} height="29"></img></HeaderLink>
+      <HeaderLink href="/"><img src={Logo} width ="40" height="29"></img> <img src={PodHarbour} height="29"></img></HeaderLink>
     </HeaderWrapper>
     </>
   )

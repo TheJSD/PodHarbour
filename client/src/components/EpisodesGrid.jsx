@@ -5,7 +5,10 @@ import styled from 'styled-components'
 const OuterEpisode = styled.div`
   display: flex;
   justify-content: center;
-  list-style: none;`
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  `
 
 
 const EpisodesGrid = ({episodes}) => {

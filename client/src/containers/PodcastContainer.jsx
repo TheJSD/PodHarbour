@@ -9,17 +9,17 @@ import { Button } from "../components/styles/Button.style"
 
 export const usersURL = "http://localhost:9000/api/users/"
 
-  const EpisodeOuterWrapper = styled.div`
+  const PodcastOuterWrapper = styled.div`
     display: flex;
     justify-content: center;
   `
-  const EpisodeWrapper = styled.div`
+  const SinglePodcastWrapper = styled.div`
   margin-top: 60px;
   margin-bottom: 20px;
   line-height: 280%;
   text-align: center;
   width: 855px;
-  height: 450px;
+  height: 420px;
   background-color: #32334d77;
   color: #ffb834;
   border-radius: 15px;
@@ -27,22 +27,24 @@ export const usersURL = "http://localhost:9000/api/users/"
   padding-right: 10px;
   `
 
-  const EpisodeImage = styled.img`
+  const PodcastImage = styled.img`
   float:left;
-  height:auto;
-  width: 260px;
+  height:220px;
+  width: 340px;
   border-radius: 10px;
   margin-top: 40px;
-  margin-left: 30px;;
+  margin-left: 30px;
+  padding-bottom: 10px;
   `
 
-  const EpisodeDesc = styled.div`
+  const PodcastDesc = styled.div`
   line-height: normal;
-  text-align: left;
-  margin-top: 15px;
+  text-align: center;
+  margin-top: 50px;
   margin-left: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: large;
   `
 
 const ButtonUnsub = styled.button`
@@ -150,16 +152,16 @@ const ButtonUnsub = styled.button`
     <>
     {user ? 
     <>
-    <EpisodeOuterWrapper>
-    <EpisodeWrapper>
-    <EpisodeImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></EpisodeImage><br />
+    <PodcastOuterWrapper>
+    <SinglePodcastWrapper>
+    <PodcastImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></PodcastImage><br />
       <h1>{podcast.name}</h1>
-            <h2>Genre: {podcast.genre}</h2>
-      <i><h2>{podcast.author}</h2></i>
+            <h3>Genre: {podcast.genre}</h3>
+      <i><h2>Content Creator: {podcast.author}</h2></i>
       {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
-    <EpisodeDesc>{podcast.description}</EpisodeDesc>
-    </EpisodeWrapper>
-    </EpisodeOuterWrapper>
+    <PodcastDesc>{podcast.description}</PodcastDesc>
+    </SinglePodcastWrapper>
+    </PodcastOuterWrapper>
             <EpisodesGrid episodes = {podcast.episodes}/></>
   : "Loading"}
   </>)
