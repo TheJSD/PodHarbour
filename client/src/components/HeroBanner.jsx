@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import HeroImg from '../../assets/site_images/heropicture.webp'
-import { Button } from './styles/Button.style'
 
     const HeroBase = styled.section`
     margin-top: 60px;
@@ -32,9 +31,10 @@ import { Button } from './styles/Button.style'
     border-radius: 15px;`
 
     const Herotext = styled.p`
+        font-size: large;
         `
     const HeroTitle = styled.h1`
-    font-size: x-large;
+    font-size: xx-large;
     margin-bottom: 10px;
     `
 

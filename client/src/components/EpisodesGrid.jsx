@@ -6,8 +6,8 @@ const OuterEpisode = styled.div`
   display: flex;
   justify-content: center;
   list-style: none;
-  /* flex-direction: column;
-  align-items: center; - these if we wanted a vertical view of episodes? */
+  flex-direction: column;
+  align-items: center;
   `
 
 
