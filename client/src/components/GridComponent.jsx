@@ -4,27 +4,22 @@ import styled from 'styled-components'
 
 
 const FlexContainer = styled.div`
-    display:flex;
-    flex-wrap: wrap;
-    gap:1rem;
-    justify-content: center;
-    padding-left: 100px;
-    padding-top: 20px;
+  display:flex;
+  flex-wrap: wrap;
+  gap:1rem;
+  justify-content: center;
+  padding-left: 100px;
+  padding-top: 20px;
 `
 
 const Title = styled.h1`
   text-align:center;
   color: #32334D;
   font-size: 50px;
-  padding-top: 50px;
-  padding-left:100px;
-    padding: 15px;
-    text-align:center;
-    color: #ffb834;
-    font-size: 50px;
-    border-radius: 15px;
-    width: fit-content;
-    background-color: #32334d77;
+  padding-top: 20px;
+  text-align:center;
+  color: #32334dd7;
+  font-size: 50px;
 `
 
 const SearchBar = styled.input`

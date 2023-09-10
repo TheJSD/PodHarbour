@@ -40,6 +40,13 @@ const NavLink = styled.a`
       color:inherit;
     }`
       
+    const help = () => {
+      window.alert("Navigate by using the navigation bar on the left hand side, you can click home at anytime to return to this page");
+    }
+
+    const aboutUs = () => {
+      window.alert("This website was made by Holly Tyler, Lewis Ferguson, James Dickson and Jack Chaplin");
+    }
     
 const NavBar = () => {
 
@@ -48,8 +55,8 @@ const NavBar = () => {
         <NavLink href="/"><NavButton>Home</NavButton></NavLink><br />
         <NavLink href="/all"><NavButton>All Podcasts</NavButton></NavLink><br />
         <NavLink href="/subscribed"><NavButton>Subscribed Podcasts</NavButton></NavLink><br />
-        <NavButton>Help</NavButton><br />
-        <NavButton>About Us</NavButton><br />
+        <NavButton onClick={help}>Help</NavButton><br />
+        <NavButton onClick={aboutUs}>About Us</NavButton><br />
     </NavWrapper>
   )
 }

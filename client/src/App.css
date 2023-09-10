@@ -1,6 +1,16 @@
 *{
     margin:0;
     padding:0;
+    ::-webkit-scrollbar {
+        width: 10px; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #ffb834; 
+        border-radius: 5px; 
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #32334d;
+    }
 }
 
 body{
