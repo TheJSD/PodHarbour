@@ -9,7 +9,7 @@ import styled from 'styled-components'
     padding: 15px;
     list-style: none;
     background-color: #32334dd7;
-    width: 205px;
+    width: 200px;
     height: 235px;
     color: #ffb834;
     margin-right: 15px;
@@ -40,6 +40,10 @@ import styled from 'styled-components'
     margin-bottom: 10px;
     margin-top: 2px;`
 
+    const AudioPlayer = styled.audio`
+    width: 220px;
+    `
+
 const EpisodeItem = ({episode}) => {
 
 
@@ -48,6 +52,7 @@ const EpisodeItem = ({episode}) => {
         <EpisodeImage src={`assets/podcast_images/${episode.image}.png`}></EpisodeImage>
           <EpisodeTitle><b>{episode.title}</b></EpisodeTitle><br/>
         <div>{episode.description}</div>
+        <AudioPlayer controls src={`../../assets/podcast_audio/${episode.audio}.mp3`}/>
       </Episode>
   )
 }

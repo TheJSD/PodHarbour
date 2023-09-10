@@ -13,19 +13,19 @@ db.podcasts.insertMany([
             title:"Episode 1: Cat Sounds",
             description: "In this episode we listen to sounds of Cats",
             image: 'animals',
-            audio: "cat.mp3"
+            audio: "meow"
         },
         {
             title:"Episode 2: Dog Sounds",
             description: "In this episode we listen to sounds of Dogs",
             image: 'animals',
-            audio: "dog.mp3"
+            audio: "woof"
         },
         {
             title:"Episode 3: Duck Sounds",
             description:"In this episode we listen to sounds of Ducks",
             image: 'animals',
-            audio: "quack.mp3"
+            audio: "quack"
         }],
     },
     {
@@ -38,19 +38,19 @@ db.podcasts.insertMany([
             title:"Episode 1: Functions",
             description: "What even are functions? Personally, I don't think they're even real.",
             image: 'IDontKnowHowToCode',
-            audio: "podcast.mp3"
+            audio: "meow"
         },
         {
             title:"Episode 2: React States",
             description: "The only state I understand is that my mental state is declining",
             image: 'IDontKnowHowToCode',
-            audio: "podcast.mp3"
+            audio: "meow"
         },
         {
             title:"Episode 3: For and While Loops",
             description: "That one time I introduced an infinite loop in production and got away with it.",
             image: 'IDontKnowHowToCode',
-            audio: "podcast.mp3"
+            audio: "meow"
         }],
     },
     {
@@ -63,31 +63,31 @@ db.podcasts.insertMany([
             title:"Mastering the Art of Self-Care",
             description: "Dive into the world of bubble baths, scented candles, and emotional expression. Real alphas take care of their feelings.",
             image: 'man',
-            audio: "podcast.mp3"
+            audio: "meow"
         },
         {
             title:"The Power of Vulnerability",
             description: "Explore how crying in public can be a display of strength and courage. Real men let it all out.",
             image: 'man',
-            audio: "podcast.mp3"
+            audio: "meow"
         },
         {
             title:"Sensitivity Training: Crafting Poems and Compliments",
             description:"Learn how to write heartfelt poems and shower your friends with compliments. Real alphas are poets at heart.",
             image: 'man',
-            audio: "podcast.mp3"
+            audio: "meow"
         },
         {
             title:"The Alpha Apology Tour",
             description:"Listen to heartfelt apologies from our hosts for all the times they've been overly assertive. Real alphas know when to say sorry.",
             image: 'man',
-            audio: "podcast.mp3"
+            audio: "meow"
         },
         {
             title:"Meditation and Mantras: Finding Your Inner Zen Warrior",
             description:"Discover the tranquility of meditation and the power of positive affirmations. Real warriors are at peace with themselves.",
             image: 'man',
-            audio: "podcast.mp3"
+            audio: "meow"
         }]
     },
     {
