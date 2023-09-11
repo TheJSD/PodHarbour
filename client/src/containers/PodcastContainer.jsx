@@ -31,32 +31,49 @@ export const usersURL = "http://localhost:9000/api/users/"
   height: 220px;
   width: 340px;
   border-radius: 10px;
-  margin-top: 45px;
+  margin-top: 55px;
   margin-left: 20px;
   margin-right: 17px;
   `
 
   const DescriptionWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
   `
-  const Socials = styled.div`
+  const SocialsContainer = styled.div`
+  display:flex;
+  flex-direction: column;
+  width: 340px;
+  line-height: 30px;
+  padding-left: 22px;
+  font-size: larger;
+  `
 
+  const PodcastInfo = styled.div`
+    line-height: 300%;
+  `
+
+  const Socials = styled.div`
+  `
+
+  const SocialsIcon = styled.div`
   `
   
   const PodcastCreator = styled.h2`
-  margin-bottom: 5px;`
+  `
 
   const PodcastDesc = styled.div`
+  flex: 1;
   line-height: normal;
   text-align: left;
-  margin-top: 10px;
-  margin-left: 100px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: large;
   `
+
+const ButtonOuter = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;
+`
 
 const ButtonUnsub = styled.button`
   color: #32334D;
@@ -165,13 +182,18 @@ const ButtonUnsub = styled.button`
     <>
     <PodcastOuterWrapper>
     <SinglePodcastWrapper>
+    <PodcastInfo>
     <PodcastImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></PodcastImage><br />
       <h1>{podcast.name}</h1>
             <h3>Genre: {podcast.genre}</h3>
       <PodcastCreator><i>Creator: {podcast.author}</i></PodcastCreator>
-      {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
+    </PodcastInfo>
+      <ButtonOuter>{(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }</ButtonOuter>
     <DescriptionWrapper>
-      <Socials>Find us on all of our Socials<FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></Socials>
+      <SocialsContainer>
+      <Socials>Find us on all of our Socials </Socials>
+      <SocialsIcon><FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></SocialsIcon>
+      </SocialsContainer>
       <PodcastDesc>{podcast.description}</PodcastDesc>
     </DescriptionWrapper>
     </SinglePodcastWrapper>
