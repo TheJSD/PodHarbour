@@ -37,6 +37,10 @@ export const usersURL = "http://localhost:9000/api/users/"
   padding-bottom: 10px;
   `
 
+  const Socials = styled.div`
+  
+  `
+  
   const PodcastDesc = styled.div`
   line-height: normal;
   text-align: center;
@@ -159,6 +163,7 @@ const ButtonUnsub = styled.button`
       <h3>Genre: {podcast.genre}</h3>
       <i><h2>Content Creator: {podcast.author}</h2></i>
       {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
+      <Socials>Find us on all of our Socials here:<FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></Socials>
     <PodcastDesc>{podcast.description}</PodcastDesc>
     </SinglePodcastWrapper>
     </PodcastOuterWrapper>
