@@ -18,15 +18,14 @@ export const usersURL = "http://localhost:9000/api/users/"
   margin-bottom: 20px;
   line-height: 270%;
   text-align: center;
-  width: 855px;
-  height: 420px;
+  width: 835px;
+  padding-left: 10px;
+  padding-right: 25px;
+  height: 450px;
   background-color: #32334d77;
   color: #ffb834;
   border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
   `
-
   const PodcastImage = styled.img`
   float:left;
   height: 220px;

@@ -6,10 +6,10 @@ import HeroImg from '../../assets/site_images/heropicture.webp'
     margin-top: 60px;
     justify-content: center;
     padding-top: 40px;
-    padding-right: 40px;
     padding-bottom: 10px;
-    padding-left: 5px;
     width: 830px;
+    padding-left: 10px;
+    padding-right: 30px;
     height: 400px;
     background-color: #32334d77;
     color: #ffb834;
