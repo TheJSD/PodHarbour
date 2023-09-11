@@ -9,6 +9,7 @@ const FlexContainer = styled.div`
   gap:1rem;
   justify-content: center;
   padding-left: 100px;
+  margin-left: 70px;
   padding-top: 20px;
 `
 
