@@ -1,11 +1,11 @@
 import "../App.css"
 import EpisodesGrid from "../components/EpisodesGrid"
-import NavBar from "../components/NavBar"
 import { useParams, useLocation } from 'react-router-dom'
 import { podcastsURL } from "../App"
 import { useEffect, useState } from "react"
 import styled from 'styled-components'
 import { Button } from "../components/styles/Button.style"
+import { FaYoutube, FaSnapchat, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
 export const usersURL = "http://localhost:9000/api/users/"
 
@@ -18,37 +18,62 @@ export const usersURL = "http://localhost:9000/api/users/"
   margin-bottom: 20px;
   line-height: 270%;
   text-align: center;
-  width: 855px;
-  height: 420px;
+  width: 835px;
+  padding-left: 10px;
+  padding-right: 25px;
+  height: 450px;
   background-color: #32334d77;
   color: #ffb834;
   border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
   `
-
   const PodcastImage = styled.img`
   float:left;
   height: 220px;
   width: 340px;
   border-radius: 10px;
-  margin-top: 45px;
+  margin-top: 55px;
   margin-left: 20px;
   margin-right: 17px;
   `
 
+  const DescriptionWrapper = styled.div`
+  display: flex;
+  `
+  const SocialsContainer = styled.div`
+  display:flex;
+  flex-direction: column;
+  width: 340px;
+  line-height: 30px;
+  padding-left: 22px;
+  font-size: larger;
+  `
+
+  const PodcastInfo = styled.div`
+    line-height: 300%;
+  `
+
+  const Socials = styled.div`
+  `
+
+  const SocialsIcon = styled.div`
+  `
+  
   const PodcastCreator = styled.h2`
-  margin-bottom: 5px;`
+  `
 
   const PodcastDesc = styled.div`
+  flex: 1;
   line-height: normal;
   text-align: left;
-  margin-top: 10px;
-  margin-left: 400px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: large;
   `
+
+const ButtonOuter = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;
+`
 
 const ButtonUnsub = styled.button`
   color: #32334D;
@@ -157,12 +182,20 @@ const ButtonUnsub = styled.button`
     <>
     <PodcastOuterWrapper>
     <SinglePodcastWrapper>
+    <PodcastInfo>
     <PodcastImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></PodcastImage><br />
       <h1>{podcast.name}</h1>
             <h3>Genre: {podcast.genre}</h3>
       <PodcastCreator><i>Creator: {podcast.author}</i></PodcastCreator>
-      {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
-    <PodcastDesc>{podcast.description}</PodcastDesc>
+    </PodcastInfo>
+      <ButtonOuter>{(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }</ButtonOuter>
+    <DescriptionWrapper>
+      <SocialsContainer>
+      <Socials>Find us on all of our Socials </Socials>
+      <SocialsIcon><FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></SocialsIcon>
+      </SocialsContainer>
+      <PodcastDesc>{podcast.description}</PodcastDesc>
+    </DescriptionWrapper>
     </SinglePodcastWrapper>
     </PodcastOuterWrapper>
             <EpisodesGrid episodes = {podcast.episodes}/></>

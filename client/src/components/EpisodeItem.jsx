@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-    const Episode = styled.li`
+  const Episode = styled.li`
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -18,12 +18,12 @@ import styled from 'styled-components'
     font-size: medium;
     gap:0.5rem;
     box-shadow: 7px 7px #0000003f;`
-    
-    const EpisodeTitle = styled.section`
+  
+  const EpisodeTitle = styled.section`
     text-align: center;
     font-size: large;`
     
-    const EpisodeImage = styled.img`
+  const EpisodeImage = styled.img`
     height: 150px;
     width: 210px;
     border-radius:10px;
@@ -32,11 +32,11 @@ import styled from 'styled-components'
     margin-top: 2px;`
 
   const EpisodeWrapper = styled.div`
-  display: flex;
-  justify-items: flex-end;
-  `
+    display: flex;
+    justify-items: flex-end;
+    `
 
-    const AudioPlayer = styled.audio`
+  const AudioPlayer = styled.audio`
     margin-top: 10px;
     width: 300px;
     `

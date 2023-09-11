@@ -14,6 +14,7 @@ const FlexContainer = styled.div`
 `
 
 const Title = styled.h1`
+  font-family: Arial, Helvetica, sans-serif;
   text-align:center;
   color: #32334D;
   font-size: 50px;
@@ -24,6 +25,7 @@ const Title = styled.h1`
 `
 
 const SearchBar = styled.input`
+  font-family: Arial, Helvetica, sans-serif;
   padding: 5px;
   margin: 5px;
   border:0;

@@ -4,42 +4,42 @@ import styled from "styled-components"
 const NavWrapper = styled.nav`
     position: fixed;
     margin-left: 1%;
-    padding-top: 40px;
-`
-const NavButton = styled.button`
-background: transparent;
-padding: 15px;
-color: #32334D;
-border: none;
-font-size: 16px;
-font-weight:bold;
-text-align:left;
-width:150px;
-height: 60px;
-&:hover {
-    background-color: #ffb83497;
-    transition: 0.8s;
-    border-radius: 5px;
-    color: #32334D;
-}
-`
+    padding-top: 40px;`
 
-const NavLink = styled.a`
-  text-decoration: none;
-  color:inherit;
-    &&:hover {
-      text-decoration: none;
-      color:inherit;
+  const NavButton = styled.button`
+    background: transparent;
+    padding: 15px;
+    color: #32334D;
+    border: none;
+    font-size: 16px;
+    font-weight:bold;
+    text-align:left;
+    width:150px;
+    height: 60px;
+    &:hover {
+        background-color: #ffb83497;
+        transition: 0.8s;
+        border-radius: 5px;
+        color: #32334D;
     }
-    &&:active {
-      text-decoration: none;
+    `
+
+  const NavLink = styled.a`
+    text-decoration: none;
     color:inherit;
-    }
-    &&:hover {
-      text-decoration: none;
+      &&:hover {
+        text-decoration: none;
+        color:inherit;
+      }
+      &&:active {
+        text-decoration: none;
       color:inherit;
-    }`
-      
+      }
+      &&:hover {
+        text-decoration: none;
+        color:inherit;
+      }`
+        
     const help = () => {
       window.alert("Navigate by using the navigation bar on the left hand side, you can click home at anytime to return to the homepage, or click the Podharbour logo on the header.");
     }
