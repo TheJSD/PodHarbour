@@ -37,8 +37,13 @@ export const usersURL = "http://localhost:9000/api/users/"
   margin-right: 17px;
   `
 
+  const DescriptionWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  `
   const Socials = styled.div`
-  
+
   `
   
   const PodcastCreator = styled.h2`
@@ -48,7 +53,7 @@ export const usersURL = "http://localhost:9000/api/users/"
   line-height: normal;
   text-align: left;
   margin-top: 10px;
-  margin-left: 400px;
+  margin-left: 100px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: large;
@@ -166,8 +171,10 @@ const ButtonUnsub = styled.button`
             <h3>Genre: {podcast.genre}</h3>
       <PodcastCreator><i>Creator: {podcast.author}</i></PodcastCreator>
       {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
-      <Socials>Find us on all of our Socials here:<FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></Socials>
-    <PodcastDesc>{podcast.description}</PodcastDesc>
+    <DescriptionWrapper>
+      <Socials>Find us on all of our Socials<FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></Socials>
+      <PodcastDesc>{podcast.description}</PodcastDesc>
+    </DescriptionWrapper>
     </SinglePodcastWrapper>
     </PodcastOuterWrapper>
             <EpisodesGrid episodes = {podcast.episodes}/></>
