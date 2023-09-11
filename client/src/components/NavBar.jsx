@@ -41,7 +41,7 @@ const NavLink = styled.a`
     }`
       
     const help = () => {
-      window.alert("Navigate by using the navigation bar on the left hand side, you can click home at anytime to return to this page");
+      window.alert("Navigate by using the navigation bar on the left hand side, you can click home at anytime to return to the homepage, or click the Podharbour logo on the header.");
     }
 
     const aboutUs = () => {
