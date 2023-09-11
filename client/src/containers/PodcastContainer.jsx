@@ -1,11 +1,11 @@
 import "../App.css"
 import EpisodesGrid from "../components/EpisodesGrid"
-import NavBar from "../components/NavBar"
 import { useParams, useLocation } from 'react-router-dom'
 import { podcastsURL } from "../App"
 import { useEffect, useState } from "react"
 import styled from 'styled-components'
 import { Button } from "../components/styles/Button.style"
+import { FaYoutube, FaSnapchat, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
 export const usersURL = "http://localhost:9000/api/users/"
 
@@ -156,7 +156,7 @@ const ButtonUnsub = styled.button`
     <SinglePodcastWrapper>
     <PodcastImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></PodcastImage><br />
       <h1>{podcast.name}</h1>
-            <h3>Genre: {podcast.genre}</h3>
+      <h3>Genre: {podcast.genre}</h3>
       <i><h2>Content Creator: {podcast.author}</h2></i>
       {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
     <PodcastDesc>{podcast.description}</PodcastDesc>
