@@ -7,21 +7,20 @@ const ItemWrapper = styled.div`
   display:flex;
   flex-direction:column;
   width:220px;
-  height:250px;
+  height:260px;
   background-color:#32334dd7;
   color: #ffb834;
-  font-size:small;
   border-radius: 20px;
   gap:0.5rem;
   align-items:center;
   padding: 5px;
+  box-shadow: 7px 7px #0000003f;
 `
 
 const PodcastImage = styled.img`
   height:auto;
   width: 200px;
-  border-radius:10px;
-  margin-bottom: 10px;
+  border-radius: 10px;;
   margin-top: 20px;
 ` 
 const PodcastTitle = styled.p`

@@ -16,7 +16,7 @@ export const usersURL = "http://localhost:9000/api/users/"
   const SinglePodcastWrapper = styled.div`
   margin-top: 60px;
   margin-bottom: 20px;
-  line-height: 280%;
+  line-height: 270%;
   text-align: center;
   width: 855px;
   height: 420px;
@@ -29,23 +29,26 @@ export const usersURL = "http://localhost:9000/api/users/"
 
   const PodcastImage = styled.img`
   float:left;
-  height:220px;
+  height: 220px;
   width: 340px;
   border-radius: 10px;
-  margin-top: 40px;
-  margin-left: 30px;
-  padding-bottom: 10px;
+  margin-top: 45px;
+  margin-left: 20px;
+  margin-right: 17px;
   `
 
   const Socials = styled.div`
   
   `
   
+  const PodcastCreator = styled.h2`
+  margin-bottom: 5px;`
+
   const PodcastDesc = styled.div`
   line-height: normal;
-  text-align: center;
-  margin-top: 50px;
-  margin-left: 10px;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 400px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: large;
@@ -160,8 +163,8 @@ const ButtonUnsub = styled.button`
     <SinglePodcastWrapper>
     <PodcastImage src={`assets/podcast_images/${podcast.image}.png`}  alt={podcast.name}></PodcastImage><br />
       <h1>{podcast.name}</h1>
-      <h3>Genre: {podcast.genre}</h3>
-      <i><h2>Content Creator: {podcast.author}</h2></i>
+            <h3>Genre: {podcast.genre}</h3>
+      <PodcastCreator><i>Creator: {podcast.author}</i></PodcastCreator>
       {(user.subscriptions.find((id) => id === podcast._id)) ? <ButtonUnsub onClick={unsubscribe}></ButtonUnsub>  : <Button onClick={subscribe}>Subscribe</Button> }
       <Socials>Find us on all of our Socials here:<FaYoutube /><FaXTwitter /><FaInstagram /><FaSnapchat /></Socials>
     <PodcastDesc>{podcast.description}</PodcastDesc>

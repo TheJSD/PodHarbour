@@ -60,7 +60,9 @@ color: #ffb834;
 margin-left: 20px;
 text-align: left;
 font-size: small;
-border-radius: 20px;`
+border-radius: 20px;
+box-shadow: 7px 7px #0000003f;
+`
 
 const PodcastTitle = styled.section`
 text-align: center;`

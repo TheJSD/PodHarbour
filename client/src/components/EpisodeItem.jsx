@@ -16,7 +16,8 @@ import styled from 'styled-components'
     background-color:#32334dd7;
     color: #ffb834;
     font-size: medium;
-    gap:0.5rem;`
+    gap:0.5rem;
+    box-shadow: 7px 7px #0000003f;`
     
     const EpisodeTitle = styled.section`
     text-align: center;
