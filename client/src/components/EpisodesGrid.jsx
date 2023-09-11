@@ -10,7 +10,6 @@ const OuterEpisode = styled.div`
   align-items: center;
   `
 
-
 const EpisodesGrid = ({episodes}) => {
 
   console.log ("loaded")

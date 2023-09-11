@@ -3,40 +3,39 @@ import styled from 'styled-components'
 import HeroImg from '../../assets/site_images/heropicture.webp'
 
     const HeroBase = styled.section`
-    margin-top: 60px;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    width: 830px;
-    padding-left: 10px;
-    padding-right: 30px;
-    height: 400px;
-    background-color: #32334d77;
-    color: #ffb834;
-    text-align: center;
-    border-radius: 15px;`
+        margin-top: 60px;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        width: 830px;
+        padding-left: 10px;
+        padding-right: 30px;
+        height: 400px;
+        background-color: #32334d77;
+        color: #ffb834;
+        text-align: center;
+        border-radius: 15px;`
 
     const HeroContainer = styled.section`
-    display: flex;
-    justify-content: center;
-    `
+        display: flex;
+        justify-content: center;
+        `
 
     const HeroPicture = styled.img`
-    float: left;
-    height: auto;
-    width: 350px;
-    margin-top: 8px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 15px;`
+        float: left;
+        height: auto;
+        width: 350px;
+        margin-top: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;`
 
     const Herotext = styled.p`
-        font-size: large;
-        `
+        font-size: large;`
+
     const HeroTitle = styled.h1`
-    font-size: xx-large;
-    margin-bottom: 10px;
-    `
+        font-size: xx-large;
+        margin-bottom: 10px;`
 
 
 const HeroBanner = () => {
